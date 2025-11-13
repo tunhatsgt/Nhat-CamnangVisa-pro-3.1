@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cẩm nang Visa - Hướng dẫn chi tiết về các loại visa, thủ tục và kinh nghiệm xin visa các nước">
+    <meta name="keywords" content="visa, thủ tục visa">
+    <meta name="author" content="Visa Guide Team">
+    <meta name="theme-color" content="#1976d2">
+    
+    <title>⚙️ Cài đặt ứng dụng Visa</title>
+    
+    <!-- PWA Manifest - Fixed path -->
+    <link rel="manifest" href="./github/manifest.json">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="./github/icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./github/icons/icon-512x512.png">
+    <link rel="apple-touch-icon" href="./github/icons/icon-192x192.png">
+    
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      padding: 40px;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      animation: slideIn 0.5s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .icon {
+      font-size: 80px;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+
+    .description {
+      color: #666;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .features {
+      background: #f7f9fc;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .feature-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .feature-icon {
+      font-size: 24px;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+
+    .install-btn {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .install-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+    }
+
+    .install-btn:active {
+      transform: translateY(0);
+    }
+
+    .install-btn.hidden {
+      display: none;
+    }
+
+    .status-message {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      display: none;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .status-message.success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      display: block;
+    }
+
+    .status-message.info {
+      background: #d1ecf1;
+      color: #0c5460;
+      border: 1px solid #bee5eb;
+      display: block;
+    }
+
+    .loading {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .footer {
+      margin-top: 30px;
+      color: #999;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .install-btn {
+        padding: 12px 30px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="icon">📱</div>
+    <h1>Cài đặt ứng dụng Visa</h1>
+    <p class="description">
+      Cài đặt ứng dụng <strong>Cẩm nang Visa</strong> để truy cập nhanh và sử dụng offline.
+    </p>
+
+    <div class="features">
+      <div class="feature-item"><span class="feature-icon">✨</span><span>Truy cập nhanh từ màn hình chính</span></div>
+      <div class="feature-item"><span class="feature-icon">📴</span><span>Hoạt động offline</span></div>
+      <div class="feature-item"><span class="feature-icon">🔔</span><span>Nhận thông báo cập nhật</span></div>
+      <div class="feature-item"><span class="feature-icon">⚡</span><span>Tải trang nhanh hơn</span></div>
+    </div>
+
+    <button id="installBtn" class="install-btn hidden">
+      <span>📲</span>
+      <span>Cài đặt ứng dụng</span>
+    </button>
+
+    <div id="statusMessage" class="status-message"></div>
+
+    <div class="footer">
+      <p>Phiên bản 2.8 | © Cẩm nang Visa</p>
+    </div>
+  </div>
+
+  <script>
+    let deferredPrompt;
+    const installBtn = document.getElementById("installBtn");
+    const statusMessage = document.getElementById("statusMessage");
+
+    function showStatus(message, type = "info") {
+      statusMessage.innerHTML = message;
+      statusMessage.className = `status-message ${type}`;
+    }
+
+    function detectPlatform() {
+      const ua = navigator.userAgent.toLowerCase();
+      if (/iphone|ipad|ipod/.test(ua)) return "ios";
+      if (/android/.test(ua)) return "android";
+      if (/windows/.test(ua)) return "windows";
+      if (/mac/.test(ua)) return "macos";
+      return "desktop";
+    }
+
+    function showPlatformInstructions(platform) {
+      const instructions = {
+        ios: `
+          <strong>📱 Cài đặt trên iPhone/iPad:</strong><br><br>
+          1. Nhấn nút <strong>Chia sẻ</strong> ⬆️ (ở thanh dưới)<br>
+          2. Chọn <strong>"Thêm vào Màn hình chính"</strong><br>
+          3. Nhấn <strong>"Thêm"</strong> để hoàn tất.<br><br>
+          Icon sẽ xuất hiện trên màn hình chính.
+        `,
+        android: `
+          <strong>📱 Cài đặt trên Android:</strong><br><br>
+          1. Nhấn biểu tượng <strong>⋮</strong> (Menu) góc phải trên<br>
+          2. Chọn <strong>"Thêm vào màn hình chính"</strong><br>
+          3. Hoặc <strong>"Cài đặt ứng dụng"</strong><br><br>
+          Ứng dụng sẽ hoạt động như app thật!
+        `,
+        windows: `
+          <strong>💻 Cài đặt trên Windows:</strong><br><br>
+          1. Nhấn biểu tượng <strong>⊕ Cài đặt</strong> trên thanh địa chỉ<br>
+          2. Hoặc Menu (⋮) → <strong>"Cài đặt Nhật-Visa..."</strong><br>
+          3. Nhấn <strong>"Cài đặt"</strong><br><br>
+          App sẽ chạy như phần mềm desktop riêng!
+        `,
+        macos: `
+          <strong>💻 Cài đặt trên macOS:</strong><br><br>
+          Trên Chrome/Edge:<br>
+          1. Nhấn biểu tượng <strong>⊕ Cài đặt</strong> trên thanh địa chỉ<br>
+          2. Hoặc Menu → <strong>"Cài đặt Nhật-Visa..."</strong><br><br>
+          Trên Safari:<br>
+          File → <strong>Thêm vào Dock</strong>
+        `,
+        desktop: `
+          <strong>💻 Cài đặt trên máy tính:</strong><br><br>
+          1. Nhấn biểu tượng <strong>⊕ Cài đặt</strong> trên thanh địa chỉ<br>
+          2. Hoặc vào Menu trình duyệt → <strong>"Cài đặt"</strong><br><br>
+          Ứng dụng sẽ mở trong cửa sổ riêng!
+        `
+      };
+      showStatus(instructions[platform] || "Hướng dẫn cài đặt không xác định.", "info");
+    }
+
+    // ✅ Nếu app đã cài đặt
+    if (window.matchMedia("(display-mode: standalone)").matches) {
+      installBtn.classList.add("hidden");
+      showStatus("✅ Ứng dụng đã được cài đặt!", "success");
+    }
+
+    // ✅ Sự kiện beforeinstallprompt
+    window.addEventListener("beforeinstallprompt", (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      installBtn.classList.remove("hidden");
+    });
+
+    // ✅ Khi bấm nút Cài đặt
+    installBtn.addEventListener("click", async () => {
+      if (!deferredPrompt) {
+        const platform = detectPlatform();
+        showPlatformInstructions(platform);
+        return;
+      }
+
+      installBtn.innerHTML = '<div class="loading"></div><span>Đang cài đặt...</span>';
+      installBtn.disabled = true;
+
+      try {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+
+        if (outcome === "accepted") {
+          showStatus("✅ Cài đặt thành công!", "success");
+          installBtn.classList.add("hidden");
+        } else {
+          showStatus("ℹ️ Bạn đã hủy cài đặt. Có thể thử lại bất cứ lúc nào!", "info");
+          installBtn.innerHTML = "<span>📲</span><span>Cài đặt ứng dụng</span>";
+          installBtn.disabled = false;
+        }
+      } catch (error) {
+        console.error("Lỗi khi cài đặt:", error);
+        showStatus("❌ Có lỗi xảy ra khi cài đặt. Vui lòng thử lại!", "info");
+        installBtn.innerHTML = "<span>📲</span><span>Cài đặt ứng dụng</span>";
+        installBtn.disabled = false;
+      }
+
+      deferredPrompt = null;
+    });
+
+    // ✅ Khi app được cài đặt thành công
+    window.addEventListener("appinstalled", () => {
+      showStatus("✅ Ứng dụng đã được cài đặt!", "success");
+      installBtn.classList.add("hidden");
+      deferredPrompt = null;
+    });
+
+    // ✅ Đăng ký Service Worker
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", async () => {
+        try {
+          const reg = await navigator.serviceWorker.register("sw.js");
+          console.log("Service Worker registered:", reg.scope);
+        } catch (err) {
+          console.error("Service Worker registration failed:", err);
+        }
+      });
+    }
+
+    // ✅ Hướng dẫn iOS fallback
+    window.addEventListener("load", () => {
+      const platform = detectPlatform();
+      if (platform === "ios" && !window.matchMedia("(display-mode: standalone)").matches) {
+        showPlatformInstructions("ios");
+        installBtn.classList.add("hidden");
+      }
+    });
+  </script>
+</body>
+</html>
