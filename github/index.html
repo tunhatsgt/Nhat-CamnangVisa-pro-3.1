@@ -870,6 +870,7 @@
   <div id="africa-list" class="ml-2 space-y-1 mt-1">
     <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('egypt'); closeMenu();">🇪🇬 Ai Cập</a>
     <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('southafrica'); closeMenu();">🇿🇦 Nam Phi</a>
+    <a href="#" class="block py-2 px-3 rounded hover:bg-indigo-50 transition-colors" onclick="openModal('morocco'); closeMenu();">🇲🇦 Morocco</a>
   </div>
 </div>
 
@@ -1466,7 +1467,17 @@
         <span class="badge">15-30 ngày</span>
       </div>
     </div>
-
+    
+    <div class="country-card" onclick="openModal('morocco')">
+      <div class="country-flag">🇲🇦</div>
+      <h2 class="text-2xl font-bold text-gray-800 mb-2">Morocco</h2>
+      <p class="text-gray-600 mb-4">Hồ sơ visa du lịch, công tác, ...</p>
+      <div class="flex gap-2 flex-wrap">
+        <span class="badge">E Visa</span>
+        <span class="badge">5-7 ngày</span>
+      </div>
+    </div>
+    
     <div class="country-card" onclick="openModal('egypt')">
       <div class="country-flag">🇪🇬</div>
       <h2 class="text-2xl font-bold text-gray-800 mb-2">Ai Cập</h2>
@@ -9364,8 +9375,604 @@
       </div>
     </div>
   </div>
+<!-- Modal Morocco -->
+  <div id="modal-morocco" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close-modal" onclick="closeModal('morocco')">×</button>
+        <div class="flex items-center gap-4">
+          <span class="text-6xl">🇲🇦</span>
+          <div>
+            <h2 class="text-3xl font-bold">Visa Morocco (Ma Rốc)</h2>
+            <p class="text-red-100 mt-2">Hướng dẫn chi tiết hồ sơ visa Ma Rốc</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-body">
+        
+        <!-- Thông tin cơ bản -->
+        <section class="card fade">
+          <h3 class="section-title">📋 Thông tin cơ bản</h3>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-bold text-lg mb-3">Nơi nộp hồ sơ</h4>
+              <div class="space-y-2 text-gray-700">
+                <p><strong>Web LSQ</strong></p>
+                <p class="text-sm text-gray-600 mt-2">Hồ sơ được nộp online qua website Lãnh Sự Quán Ma Rốc</p>
+              </div>
+            </div>
+            
+            <div>
+              <h4 class="font-bold text-lg mb-3">Thời gian & Loại visa</h4>
+              <div class="info-box">
+                <p><strong>⏱️ Thời gian xét duyệt:</strong> Trung bình 3-7 ngày làm việc</p>
+                <p class="text-sm mt-2 text-gray-600">Tính từ thời điểm nộp hồ sơ vào LSQ (chưa bao gồm thời gian chuẩn bị hồ sơ)</p>
+                <p class="mt-3"><strong>📝 Loại visa:</strong> Online</p>
+              </div>
+              
+              <div class="warning-box mt-4">
+                <p class="font-semibold mb-2">⚠️ Lưu ý quan trọng:</p>
+                <ul class="list-disc ml-5 text-sm space-y-1">
+                  <li>Quyết định xét cấp visa thuộc về LSQ/ĐSQ</li>
+                  <li>Quý khách vui lòng khai đúng và đầy đủ các thông tin để bổ sung hồ sơ xin visa</li>
+                  <li>Quý khách sẽ tự chịu trách nhiệm với Đại Sứ Quán về những thông tin mà mình đã cung cấp cho Công ty du lịch</li>
+                  <li>Trong quá trình thực hiện, nếu phía Cơ quan ngoại giao Ma Rốc yêu cầu cung cấp thêm thông tin hoặc hồ sơ, đề nghị quý khách cộng tác và cung cấp theo yêu cầu</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-6">
+            <h4 class="font-bold text-lg mb-3">📸 Yêu cầu hình chụp</h4>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
+                <li>File hình 4x6 chuẩn quốc tế (file JPEG)</li>
+                <li>Mới chụp trên nền phông màu trắng</li>
+                <li>Không đeo kính, bông tai</li>
+                <li><strong class="text-red-600">Đề nghị quý khách cung cấp hình chụp chuẩn tại tiệm/Studio</strong></li>
+                <li><strong class="text-red-600">Không nhận hình tự chụp (selfie)</strong></li>
+              </ul>
+            </div>
+          </div>
+       <!-- 1. Hồ sơ cá nhân -->
+        <section class="card fade">
+          <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+            <h3 class="section-title">👤 1. Hồ sơ cá nhân</h3>
+            <div class="flex gap-2 items-center flex-wrap">
+              <input id="morocco-personal-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+              <select id="morocco-personal-filter" class="border rounded p-2 text-sm">
+                <option value="all">— Tất cả —</option>
+                <option value="doc-than">Độc thân</option>
+                <option value="ket-hon">Kết hôn</option>
+                <option value="ly-hon">Ly hôn</option>
+                <option value="goa">Góa</option>
+                <option value="con-nuoi">Con nuôi</option>
+                <option value="doi-ten">Đổi tên</option>
+                <option value="tre-em">Trẻ em</option>
+              </select>
+              <button onclick="showAllItems('morocco', 'personal')" class="px-3 py-2 bg-red-600 text-white rounded text-sm hover:bg-red-700 transition-colors">Hiện tất cả</button>
+              <button onclick="resetFilter('morocco', 'personal')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="morocco" data-group="personal" data-item="doc-than">
+              <h4 class="font-bold text-red-700 mb-3">Độc thân</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Form thông tin cá nhân xin visa Morocco</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>File ảnh 4x6</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Quý khách cần cung cấp đủ và đảm bảo các thông tin cung cấp phải chính xác</p>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="morocco" data-group="personal" data-item="ket-hon">
+              <h4 class="font-bold text-red-700 mb-3">Kết hôn</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Form thông tin cá nhân xin visa Morocco</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>File ảnh 4x6</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Quý khách cần cung cấp đủ và đảm bảo các thông tin cung cấp phải chính xác</p>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="morocco" data-group="personal" data-item="ly-hon">
+              <h4 class="font-bold text-red-700 mb-3">Ly hôn</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Form thông tin cá nhân xin visa Morocco</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>File ảnh 4x6</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Quý khách cần cung cấp đủ và đảm bảo các thông tin cung cấp phải chính xác</p>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="morocco" data-group="personal" data-item="goa">
+              <h4 class="font-bold text-red-700 mb-3">Góa</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Form thông tin cá nhân xin visa Morocco</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>File ảnh 4x6</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Quý khách cần cung cấp đủ và đảm bảo các thông tin cung cấp phải chính xác</p>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="morocco" data-group="personal" data-item="con-nuoi">
+              <h4 class="font-bold text-red-700 mb-3">Con nuôi / Giám hộ</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Form thông tin cá nhân xin visa Morocco</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>File ảnh 4x6</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Quý khách cần cung cấp đủ và đảm bảo các thông tin cung cấp phải chính xác</p>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="morocco" data-group="personal" data-item="doi-ten">
+              <h4 class="font-bold text-red-700 mb-3">Đổi tên</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Form thông tin cá nhân xin visa Morocco</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>File ảnh 4x6</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Quý khách cần cung cấp đủ và đảm bảo các thông tin cung cấp phải chính xác</p>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="morocco" data-group="personal" data-item="tre-em">
+              <h4 class="font-bold text-red-700 mb-3">Trẻ em đi cùng</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Form thông tin cá nhân xin visa Morocco</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>File ảnh 4x6</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Quý khách cần cung cấp đủ và đảm bảo các thông tin cung cấp phải chính xác</p>
+            </div>
+          </div>
+          
+          <div class="info-box mt-4">
+            <p class="font-semibold text-blue-800">📌 Lưu ý đặc biệt về hình ảnh:</p>
+            <p class="text-sm mt-2">Hình ảnh phải được chụp tại studio chuyên nghiệp, không chấp nhận ảnh selfie. Đây là yêu cầu nghiêm ngặt của LSQ Ma Rốc.</p>
+          </div>
+        </section>
 
-               
+        <!-- 4. Hồ sơ chuyến đi -->
+        <section class="card fade">
+          <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+            <h3 class="section-title">✈️ 4. Hồ sơ chuyến đi</h3>
+            <div class="flex gap-2 items-center flex-wrap">
+              <input id="morocco-travel-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+              <select id="morocco-travel-filter" class="border rounded p-2 text-sm">
+                <option value="all">— Tất cả —</option>
+                <option value="dulich">Du lịch</option>
+              </select>
+              <button onclick="showAllItems('morocco', 'travel')" class="px-3 py-2 bg-red-600 text-white rounded text-sm hover:bg-red-700 transition-colors">Hiện tất cả</button>
+              <button onclick="resetFilter('morocco', 'travel')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="morocco" data-group="travel" data-item="dulich">
+              <h4 class="font-bold text-red-700 mb-3">Du lịch (cá nhân / tour)</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Vé máy bay khứ hồi / booking</li>
+                <li>Xác nhận đặt phòng khách sạn</li>
+                <li>Lịch trình chi tiết</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="warning-box mt-4">
+            <p class="font-semibold">💡 Lưu ý:</p>
+            <ul class="list-disc ml-5 text-sm mt-2 space-y-1">
+              <li>Lịch trình nên logic, đúng mục đích, không quá dày</li>
+              <li>Cần có thông tin chi tiết người xin Visa trên "booking giữ chỗ"</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Thông tin tổng hợp -->
+        <section class="card fade">
+          <h3 class="section-title">📝 Thông tin tổng hợp</h3>
+          
+          <div class="space-y-4">
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-indigo-200 rounded-lg p-4">
+              <h4 class="font-bold text-indigo-800 mb-3">🎯 Đặc điểm visa Morocco</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Thời gian xử lý nhanh: 3-7 ngày làm việc</li>
+                <li>Hồ sơ tương đối đơn giản: form thông tin, hộ chiếu và ảnh</li>
+                <li>Nộp hồ sơ online qua website Lãnh Sự Quán</li>
+                <li>Yêu cầu nghiêm ngặt về chất lượng ảnh - phải chụp tại studio chuyên nghiệp</li>
+                <li>Cơ quan ngoại giao Ma Rốc có thể yêu cầu bổ sung tài liệu bất cứ lúc nào</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gradient-to-r from-green-50 to-teal-50 border-2 border-green-200 rounded-lg p-4">
+              <h4 class="font-bold text-green-800 mb-3">✅ Quy trình xin visa</h4>
+              <ol class="list-decimal ml-5 text-sm space-y-2 text-gray-700">
+                <li>Chụp ảnh chuẩn tại studio (không selfie) - file JPEG 4x6</li>
+                <li>Điền form thông tin cá nhân chính xác và đầy đủ</li>
+                <li>Chuẩn bị hộ chiếu còn hạn ít nhất 6 tháng</li>
+                <li>Chuẩn bị tài liệu chuyến đi (vé máy bay, khách sạn, lịch trình)</li>
+                <li>Nộp hồ sơ online qua website LSQ Ma Rốc</li>
+                <li>Chờ kết quả sau 3-7 ngày làm việc</li>
+                <li>Sẵn sàng bổ sung tài liệu nếu LSQ yêu cầu</li>
+              </ol>
+            </div>
+            
+            <div class="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-lg p-4">
+              <h4 class="font-bold text-orange-800 mb-3">⚠️ Những điều cần lưu ý đặc biệt</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li><strong class="text-red-600">Trách nhiệm thông tin:</strong> Quý khách tự chịu trách nhiệm với Đại Sứ Quán về mọi thông tin đã cung cấp</li>
+                <li><strong class="text-red-600">Yêu cầu ảnh:</strong> KHÔNG chấp nhận ảnh selfie - phải chụp tại studio chuyên nghiệp</li>
+                <li>Thông tin trong form phải chính xác 100%</li>
+                <li>Hộ chiếu phải còn hạn ít nhất 6 tháng</li>
+                <li>Cơ quan ngoại giao Ma Rốc có thể yêu cầu bổ sung hồ sơ bất cứ lúc nào - khách hàng cần cộng tác và cung cấp kịp thời</li>
+                <li>Nên chuẩn bị booking vé máy bay và khách sạn có thể hủy miễn phí</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gradient-to-r from-red-50 to-pink-50 border-2 border-red-200 rounded-lg p-4">
+              <h4 class="font-bold text-red-800 mb-3">🚫 Lỗi thường gặp cần tránh</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Sử dụng ảnh selfie thay vì ảnh chụp tại studio</li>
+                <li>Khai báo thông tin không chính xác hoặc thiếu</li>
+                <li>Hộ chiếu sắp hết hạn (dưới 6 tháng)</li>
+                <li>Ảnh không đúng chuẩn: đeo kính, bông tai, nền không trắng</li>
+                <li>Không chuẩn bị sẵn sàng để bổ sung tài liệu khi được yêu cầu</li>
+              </ul>
+            </div>
+            
+            <div class="info-box">
+              <p class="font-semibold mb-2">💼 Hồ sơ công việc và tài chính:</p>
+              <p class="text-sm">Mặc dù không được liệt kê chi tiết trong tài liệu cơ bản, Cơ quan ngoại giao Ma Rốc có thể yêu cầu bổ sung:</p>
+              <ul class="list-disc ml-5 text-sm mt-2 space-y-1">
+                <li>Giấy xác nhận công việc có dấu công ty</li>
+                <li>Sao kê ngân hàng 3-6 tháng gần nhất</li>
+                <li>Giấy phép kinh doanh (đối với chủ doanh nghiệp)</li>
+                <li>Giấy tờ chứng minh tài chính đủ để chi trả chuyến đi</li>
+                <li>Bảo hiểm du lịch (tùy trường hợp)</li>
+              </ul>
+              <p class="text-sm mt-2 text-red-600 font-semibold">⚠️ Nên chuẩn bị sẵn các tài liệu này để bổ sung ngay khi được yêu cầu, tránh chậm trễ.</p>
+            </div>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <p class="font-semibold mb-2 text-blue-800">🌍 Về Ma Rốc:</p>
+              <p class="text-sm text-gray-700">Ma Rốc (Morocco) là quốc gia Bắc Phi với nền văn hóa phong phú, kết hợp giữa Ả Rập, Berber và châu Âu. Các điểm đến nổi tiếng bao gồm Marrakech, Casablanca, Fes, và sa mạc Sahara. Visa du lịch thường có thời hạn 30-90 ngày.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+ <!-- Modal Morocco -->
+  <div id="modal-morocco" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close-modal" onclick="closeModal('morocco')">×</button>
+        <div class="flex items-center gap-4">
+          <span class="text-6xl">🇲🇦</span>
+          <div>
+            <h2 class="text-3xl font-bold">Visa Morocco (Ma Rốc)</h2>
+            <p class="text-red-100 mt-2">Hướng dẫn chi tiết hồ sơ visa Ma Rốc</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-body">
+        
+        <!-- Thông tin cơ bản -->
+        <section class="card fade">
+          <h3 class="section-title">📋 Thông tin cơ bản</h3>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-bold text-lg mb-3">Nơi nộp hồ sơ</h4>
+              <div class="space-y-2 text-gray-700">
+                <p><strong>Web LSQ</strong></p>
+                <p class="text-sm text-gray-600 mt-2">Hồ sơ được nộp online qua website Lãnh Sự Quán Ma Rốc</p>
+              </div>
+            </div>
+            
+            <div>
+              <h4 class="font-bold text-lg mb-3">Thời gian & Loại visa</h4>
+              <div class="info-box">
+                <p><strong>⏱️ Thời gian xét duyệt:</strong> Trung bình 3-7 ngày làm việc</p>
+                <p class="text-sm mt-2 text-gray-600">Tính từ thời điểm nộp hồ sơ vào LSQ (chưa bao gồm thời gian chuẩn bị hồ sơ)</p>
+                <p class="mt-3"><strong>📝 Loại visa:</strong> Online</p>
+              </div>
+              
+              <div class="warning-box mt-4">
+                <p class="font-semibold mb-2">⚠️ Lưu ý quan trọng:</p>
+                <ul class="list-disc ml-5 text-sm space-y-1">
+                  <li>Quyết định xét cấp visa thuộc về LSQ/ĐSQ</li>
+                  <li>Quý khách vui lòng khai đúng và đầy đủ các thông tin để bổ sung hồ sơ xin visa</li>
+                  <li>Quý khách sẽ tự chịu trách nhiệm với Đại Sứ Quán về những thông tin mà mình đã cung cấp cho Công ty du lịch</li>
+                  <li>Trong quá trình thực hiện, nếu phía Cơ quan ngoại giao Ma Rốc yêu cầu cung cấp thêm thông tin hoặc hồ sơ, đề nghị quý khách cộng tác và cung cấp theo yêu cầu</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-6">
+            <h4 class="font-bold text-lg mb-3">📸 Yêu cầu hình chụp</h4>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
+                <li>File hình 4x6 chuẩn quốc tế (file JPEG)</li>
+                <li>Mới chụp trên nền phông màu trắng</li>
+                <li>Không đeo kính, bông tai</li>
+                <li><strong class="text-red-600">Đề nghị quý khách cung cấp hình chụp chuẩn tại tiệm/Studio</strong></li>
+                <li><strong class="text-red-600">Không nhận hình tự chụp (selfie)</strong></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 1. Hồ sơ cá nhân -->
+        <section class="card fade">
+          <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+            <h3 class="section-title">👤 1. Hồ sơ cá nhân</h3>
+                     
+          <div class="grid md:grid-cols-2 gap-4">
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Form thông tin cá nhân xin visa Morocco</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>File ảnh 4x6</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Quý khách cần cung cấp đủ và đảm bảo các thông tin cung cấp phải chính xác</p>
+            </div>
+            <div class="info-box mt-4">
+            <p class="font-semibold text-blue-800">📌 Lưu ý đặc biệt về hình ảnh:</p>
+            <p class="text-sm mt-2">Hình ảnh phải được chụp tại studio chuyên nghiệp, không chấp nhận ảnh selfie. Đây là yêu cầu nghiêm ngặt của LSQ Ma Rốc.</p>
+          </div>
+        </section>
+
+        <!-- 2. Hồ sơ chuyến đi -->
+          <section class="card fade">
+          <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+            <h3 class="section-title">✈️ 2. Hồ sơ chuyến đi</h3>
+                     
+          <div class="grid md:grid-cols-2 gap-4">
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                 <li>Vé máy bay khứ hồi / booking</li>
+                <li>Xác nhận đặt phòng khách sạn</li>
+                <li>Lịch trình chi tiết</li>
+              </ul>
+          
+          <div class="warning-box mt-4">
+            <p class="font-semibold">💡 Lưu ý:</p>
+            <ul class="list-disc ml-5 text-sm mt-2 space-y-1">
+              <li>Lịch trình nên logic, đúng mục đích, không quá dày</li>
+              <li>Cần có thông tin chi tiết người xin Visa trên "booking giữ chỗ"</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Thông tin tổng hợp -->
+        <section class="card fade">
+          <h3 class="section-title">📝 Thông tin tổng hợp</h3>
+          
+          <div class="space-y-4">
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-indigo-200 rounded-lg p-4">
+              <h4 class="font-bold text-indigo-800 mb-3">🎯 Đặc điểm visa Morocco</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Thời gian xử lý nhanh: 3-7 ngày làm việc</li>
+                <li>Hồ sơ tương đối đơn giản: form thông tin, hộ chiếu và ảnh</li>
+                <li>Nộp hồ sơ online qua website Lãnh Sự Quán</li>
+                <li>Yêu cầu nghiêm ngặt về chất lượng ảnh - phải chụp tại studio chuyên nghiệp</li>
+                <li>Cơ quan ngoại giao Ma Rốc có thể yêu cầu bổ sung tài liệu bất cứ lúc nào</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gradient-to-r from-green-50 to-teal-50 border-2 border-green-200 rounded-lg p-4">
+              <h4 class="font-bold text-green-800 mb-3">✅ Quy trình xin visa</h4>
+              <ol class="list-decimal ml-5 text-sm space-y-2 text-gray-700">
+                <li>Chụp ảnh chuẩn tại studio (không selfie) - file JPEG 4x6</li>
+                <li>Điền form thông tin cá nhân chính xác và đầy đủ</li>
+                <li>Chuẩn bị hộ chiếu còn hạn ít nhất 6 tháng</li>
+                <li>Chuẩn bị tài liệu chuyến đi (vé máy bay, khách sạn, lịch trình)</li>
+                <li>Nộp hồ sơ online qua website LSQ Ma Rốc</li>
+                <li>Chờ kết quả sau 3-7 ngày làm việc</li>
+                <li>Sẵn sàng bổ sung tài liệu nếu LSQ yêu cầu</li>
+              </ol>
+            </div>
+            
+            <div class="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-lg p-4">
+              <h4 class="font-bold text-orange-800 mb-3">⚠️ Những điều cần lưu ý đặc biệt</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li><strong class="text-red-600">Trách nhiệm thông tin:</strong> Quý khách tự chịu trách nhiệm với Đại Sứ Quán về mọi thông tin đã cung cấp</li>
+                <li><strong class="text-red-600">Yêu cầu ảnh:</strong> KHÔNG chấp nhận ảnh selfie - phải chụp tại studio chuyên nghiệp</li>
+                <li>Thông tin trong form phải chính xác 100%</li>
+                <li>Hộ chiếu phải còn hạn ít nhất 6 tháng</li>
+                <li>Cơ quan ngoại giao Ma Rốc có thể yêu cầu bổ sung hồ sơ bất cứ lúc nào - khách hàng cần cộng tác và cung cấp kịp thời</li>
+                <li>Nên chuẩn bị booking vé máy bay và khách sạn có thể hủy miễn phí</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gradient-to-r from-red-50 to-pink-50 border-2 border-red-200 rounded-lg p-4">
+              <h4 class="font-bold text-red-800 mb-3">🚫 Lỗi thường gặp cần tránh</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Sử dụng ảnh selfie thay vì ảnh chụp tại studio</li>
+                <li>Khai báo thông tin không chính xác hoặc thiếu</li>
+                <li>Hộ chiếu sắp hết hạn (dưới 6 tháng)</li>
+                <li>Ảnh không đúng chuẩn: đeo kính, bông tai, nền không trắng</li>
+                <li>Không chuẩn bị sẵn sàng để bổ sung tài liệu khi được yêu cầu</li>
+              </ul>
+            </div>
+            
+            <div class="info-box">
+              <p class="font-semibold mb-2">💼 Hồ sơ công việc và tài chính:</p>
+              <p class="text-sm">Mặc dù không được liệt kê chi tiết trong tài liệu cơ bản, Cơ quan ngoại giao Ma Rốc có thể yêu cầu bổ sung:</p>
+              <ul class="list-disc ml-5 text-sm mt-2 space-y-1">
+                <li>Giấy xác nhận công việc có dấu công ty</li>
+                <li>Sao kê ngân hàng 3-6 tháng gần nhất</li>
+                <li>Giấy phép kinh doanh (đối với chủ doanh nghiệp)</li>
+                <li>Giấy tờ chứng minh tài chính đủ để chi trả chuyến đi</li>
+                <li>Bảo hiểm du lịch (tùy trường hợp)</li>
+              </ul>
+              <p class="text-sm mt-2 text-red-600 font-semibold">⚠️ Nên chuẩn bị sẵn các tài liệu này để bổ sung ngay khi được yêu cầu, tránh chậm trễ.</p>
+            </div>
+            
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <p class="font-semibold mb-2 text-blue-800">🌍 Về Ma Rốc:</p>
+              <p class="text-sm text-gray-700">Ma Rốc (Morocco) là quốc gia Bắc Phi với nền văn hóa phong phú, kết hợp giữa Ả Rập, Berber và châu Âu. Các điểm đến nổi tiếng bao gồm Marrakech, Casablanca, Fes, và sa mạc Sahara. Visa du lịch thường có thời hạn 30-90 ngày.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+  <!-- Modal Thổ Nhĩ Kỳ -->
+  <div id="modal-turkey" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close-modal" onclick="closeModal('turkey')">×</button>
+        <div class="flex items-center gap-4">
+          <span class="text-6xl">🇹🇷</span>
+          <div>
+            <h2 class="text-3xl font-bold">Visa Thổ Nhĩ Kỳ (Turkey)</h2>
+            <p class="text-red-100 mt-2">Hướng dẫn chi tiết hồ sơ visa Thổ Nhĩ Kỳ</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-body">
+        
+        <!-- Thông tin cơ bản -->
+        <section class="card fade">
+          <h3 class="section-title">📋 Thông tin cơ bản</h3>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-bold text-lg mb-3">Nơi nộp hồ sơ</h4>
+              <div class="space-y-2 text-gray-700">
+                <p><strong>Web LSQ</strong></p>
+                <p class="text-sm text-gray-600 mt-2">Hồ sơ được nộp online qua website Lãnh Sự Quán</p>
+              </div>
+            </div>
+            
+            <div>
+              <h4 class="font-bold text-lg mb-3">Thời gian & Loại visa</h4>
+              <div class="info-box">
+                <p><strong>⏱️ Thời gian xét duyệt:</strong> Trung bình 3-7 ngày làm việc</p>
+                <p class="text-sm mt-2 text-gray-600">Tính từ thời điểm nộp hồ sơ vào LSQ (chưa bao gồm thời gian chuẩn bị hồ sơ)</p>
+                <p class="mt-3"><strong>📝 Loại visa:</strong> Online</p>
+              </div>
+              
+              <div class="warning-box mt-4">
+                <p class="font-semibold mb-2">⚠️ Lưu ý quan trọng:</p>
+                <ul class="list-disc ml-5 text-sm space-y-1">
+                  <li>Quyết định xét cấp visa thuộc về LSQ/ĐSQ</li>
+                  <li>Hộ Chiếu scan từ bản gốc</li>
+                  <li>Quý khách cần cung cấp đủ và đảm bảo các thông tin cung cấp phải chính xác</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-6">
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <p class="font-semibold mb-2 text-blue-800">📢 Trách nhiệm khách hàng:</p>
+              <ul class="list-disc ml-5 text-sm space-y-1 text-gray-700">
+                <li>Quý khách vui lòng khai đúng và đầy đủ các thông tin như trên để bổ sung hồ sơ xin visa</li>
+                <li>Quý khách sẽ tự chịu trách nhiệm với Đại Sứ Quán về những thông tin mà mình đã cung cấp cho Công ty du lịch</li>
+                <li>Trong quá trình thực hiện, nếu phía Cơ quan ngoại giao yêu cầu quý khách cung cấp thêm thông tin hoặc hồ sơ liên quan đến cá nhân, công việc,..., ngoài những thông tin nêu trên, đề nghị quý khách cộng tác và cung cấp theo yêu cầu</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 1. Hồ sơ cá nhân -->
+        <section class="card fade">
+          <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+            <h3 class="section-title">👤 1. Hồ sơ cá nhân</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Form thông tin cá nhân xin visa Thổ Nhĩ Kỳ</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Quý khách cần cung cấp đủ và đảm bảo các thông tin cung cấp phải chính xác</p>
+            </div>
+          </section>
+
+        <!-- 4. Hồ sơ chuyến đi -->
+        <section class="card fade">
+          <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+            <h3 class="section-title">✈️ 2. Hồ sơ chuyến đi</h3>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-4">
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Vé máy bay khứ hồi / booking</li>
+                <li>Xác nhận đặt phòng khách sạn</li>
+                <li>Lịch trình chi tiết</li>
+              </ul>
+            </div>
+          
+          <div class="warning-box mt-4">
+            <p class="font-semibold">💡 Lưu ý:</p>
+            <ul class="list-disc ml-5 text-sm mt-2 space-y-1">
+              <li>Lịch trình nên logic, đúng mục đích, không quá dày</li>
+              <li>Cần có thông tin chi tiết người xin Visa trên "booking giữ chỗ"</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Thông tin tổng hợp -->
+        <section class="card fade">
+          <h3 class="section-title">📝 Thông tin tổng hợp</h3>
+          
+          <div class="space-y-4">
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-indigo-200 rounded-lg p-4">
+              <h4 class="font-bold text-indigo-800 mb-3">🎯 Đặc điểm visa Thổ Nhĩ Kỳ</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Thời gian xử lý nhanh: 3-7 ngày làm việc</li>
+                <li>Hồ sơ đơn giản, chủ yếu là form thông tin và hộ chiếu</li>
+                <li>Nộp hồ sơ online qua website Lãnh Sự Quán</li>
+                <li>Không yêu cầu nhiều giấy tờ chứng minh tài chính như các nước khác</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gradient-to-r from-green-50 to-teal-50 border-2 border-green-200 rounded-lg p-4">
+              <h4 class="font-bold text-green-800 mb-3">✅ Quy trình xin visa</h4>
+              <ol class="list-decimal ml-5 text-sm space-y-2 text-gray-700">
+                <li>Điền form thông tin cá nhân chính xác và đầy đủ</li>
+                <li>Chuẩn bị hộ chiếu còn hạn ít nhất 6 tháng (scan bản gốc)</li>
+                <li>Chuẩn bị tài liệu chuyến đi (vé máy bay, khách sạn, lịch trình)</li>
+                <li>Nộp hồ sơ online qua website LSQ</li>
+                <li>Chờ kết quả sau 3-7 ngày làm việc</li>
+              </ol>
+            </div>
+            
+            <div class="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-lg p-4">
+              <h4 class="font-bold text-orange-800 mb-3">⚠️ Những điều cần lưu ý</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Thông tin trong form phải chính xác 100% - khách hàng chịu trách nhiệm về thông tin đã cung cấp</li>
+                <li>Hộ chiếu phải scan rõ ràng từ bản gốc</li>
+                <li>LSQ có thể yêu cầu bổ sung tài liệu bất cứ lúc nào trong quá trình xét duyệt</li>
+                <li>Nên chuẩn bị booking vé máy bay và khách sạn có thể hủy miễn phí để tránh rủi ro</li>
+              </ul>
+            </div>
+            
+            <div class="info-box">
+              <p class="font-semibold mb-2">💼 Hồ sơ công việc và tài chính:</p>
+              <p class="text-sm">Mặc dù không được liệt kê chi tiết trong tài liệu, LSQ Thổ Nhĩ Kỳ có thể yêu cầu bổ sung:</p>
+              <ul class="list-disc ml-5 text-sm mt-2 space-y-1">
+                <li>Giấy xác nhận công việc</li>
+                <li>Sao kê ngân hàng 3-6 tháng</li>
+                <li>Giấy phép kinh doanh (đối với chủ doanh nghiệp)</li>
+                <li>Giấy tờ chứng minh tài chính khác</li>
+              </ul>
+              <p class="text-sm mt-2 text-gray-600">Nên chuẩn bị sẵn các tài liệu này để bổ sung khi được yêu cầu.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
 </main>
 
 <!-- PHẦN DƯỚI -->
