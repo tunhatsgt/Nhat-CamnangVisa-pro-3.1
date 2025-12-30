@@ -11564,7 +11564,412 @@
       </div>
     </div>
   </div> 
-		
+  <!-- Modal Trung Quốc -->
+  <div id="modal-china" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close-modal" onclick="window.close()">×</button>
+        <div class="flex items-center gap-4">
+          <span class="text-6xl">🇨🇳</span>
+          <div>
+            <h2 class="text-3xl font-bold">Visa Trung Quốc (China)</h2>
+            <p class="text-red-100 mt-2">Hướng dẫn chi tiết hồ sơ visa Trung Quốc - Áp dụng cho khách mang quốc tịch Việt Nam</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-body">
+        
+        <!-- Thông tin cơ bản -->
+        <section class="card">
+          <h3 class="section-title">📋 Thông tin cơ bản</h3>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-bold text-lg mb-3">Nơi nộp hồ sơ</h4>
+              <div class="space-y-2 text-gray-700">
+                <p><strong>Phòng Visa STS TP.HCM</strong></p>
+                <p class="text-sm text-gray-600 mt-2">Hồ sơ được nộp trực tiếp tại văn phòng Saigontourist</p>
+              </div>
+            </div>
+            
+            <div>
+              <h4 class="font-bold text-lg mb-3">Thời gian & Loại visa</h4>
+              <div class="info-box">
+                <p><strong>⏱️ Thời gian xét duyệt:</strong> Trung bình 02-07 ngày làm việc</p>
+                <p class="text-sm mt-2 text-gray-600">Trừ thứ 7, chủ nhật và các ngày lễ</p>
+                <p class="mt-3"><strong>📝 Loại visa:</strong> Visa Đoàn - cửa khẩu; Visa dán - visa lẻ</p>
+              </div>
+              
+              <div class="warning-box mt-4">
+                <p class="font-semibold mb-2">⚠️ Lưu ý quan trọng:</p>
+                <ul class="list-disc ml-5 text-sm space-y-1">
+                  <li>Cần ít nhất 3 pax để có thể triển khai</li>
+                  <li>Quyết định xét cấp visa thuộc về LSQ/ĐSQ</li>
+                  <li>Thủ tục visa có thể thay đổi hoặc LSQ có thể yêu cầu bổ sung thêm giấy tờ</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-6">
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <p class="font-semibold mb-2 text-blue-800">📢 Trách nhiệm khách hàng:</p>
+              <ul class="list-disc ml-5 text-sm space-y-1 text-gray-700">
+                <li>Quý khách vui lòng khai đúng và đầy đủ các thông tin để bổ sung hồ sơ xin visa</li>
+                <li>Quý khách sẽ tự chịu trách nhiệm với Đại Sứ Quán về những thông tin mà mình đã cung cấp cho Công ty du lịch</li>
+                <li>Trong quá trình thực hiện, nếu phía Cơ quan ngoại giao yêu cầu quý khách cung cấp thêm thông tin hoặc hồ sơ liên quan, đề nghị quý khách cộng tác và cung cấp theo yêu cầu</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab Navigation -->
+        <div class="tab-buttons">
+          <button class="tab-button active" onclick="switchTab('cuakhau')">
+            🚢 Visa Đoàn Thể - Cửa Khẩu
+          </button>
+          <button class="tab-button" onclick="switchTab('visadan')">
+            📋 Visa Dán
+          </button>
+        </div>
+
+        <!-- TAB 1: VISA ĐOÀN THỂ - CỬA KHẨU -->
+        <div id="tab-cuakhau" class="tab-content active">
+          
+          <div class="danger-box mb-6">
+            <p class="font-bold text-lg mb-2">🚢 HỒ SƠ XIN VISA ĐOÀN THỂ - CỬA KHẨU</p>
+            <p class="text-sm">Loại visa phù hợp cho các đoàn du lịch có tổ chức</p>
+          </div>
+
+          <!-- 1. Passport - Cửa Khẩu -->
+          <section class="card">
+            <h3 class="section-title">📘 1. Passport (Bản gốc còn thời hạn)</h3>
+            
+            <div class="requirement-item mb-4">
+              <h4 class="font-semibold text-red-600 mb-3">Yêu cầu về Passport:</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Passport còn thời hạn trên <strong>6 tháng</strong> tính từ ngày kết thúc tour</li>
+                <li>Passport nguyên vẹn, không lem bẩn, vết chấm mực</li>
+                <li>Scan <strong>cả cuốn Passport</strong> (kể cả trang bìa màu)</li>
+                <li><strong class="text-red-600">Bắt buộc phải có nơi sinh hoặc bị chú nơi sinh</strong></li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 2. Ảnh - Cửa Khẩu -->
+          <section class="card">
+            <h3 class="section-title">📷 2. Ảnh 4x6 (02 ảnh)</h3>
+            
+            <div class="requirement-item mb-4">
+              <h4 class="font-semibold text-red-600 mb-3">Yêu cầu về ảnh:</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li><strong>Ảnh khác với ảnh trên passport</strong></li>
+                <li>Phông nền trắng, chụp thấy trán và 2 bên tai</li>
+                <li>Không đeo trang sức (khuyên tai, dây chuyền, khuyên mũi...)</li>
+                <li>Không mặc nhiều lớp áo, không nghiêng người</li>
+                <li>Không cười hé răng</li>
+                <li>Không mặc áo trắng</li>
+                <li>Không đeo mắt kính</li>
+                <li>Không xoã mái che trán và mang tai</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 3. Tờ khai - Cửa Khẩu -->
+          <section class="card">
+            <h3 class="section-title">📝 3. Tờ khai thông tin cá nhân</h3>
+            <div class="info-box">
+              <p class="text-sm text-gray-700">Quý khách vui lòng điền đầy đủ thông tin vào tờ khai thông tin cá nhân (file đính kèm)</p>
+            </div>
+          </section>
+
+          <!-- 4. Trẻ em - Cửa Khẩu -->
+          <section class="card">
+            <h3 class="section-title">👶 4. Lưu ý đối với trẻ em dưới 18 tuổi</h3>
+            
+            <div class="space-y-4">
+              
+              <div class="requirement-item">
+                <h4 class="font-semibold text-red-600 mb-2">Trường hợp 1: Trẻ em chỉ đi với cha HOẶC mẹ</h4>
+                <p class="text-sm text-gray-700">✓ Phải làm ủy quyền cho người còn lại</p>
+              </div>
+              
+              <div class="requirement-item">
+                <h4 class="font-semibold text-red-600 mb-2">Trường hợp 2: Trẻ em không đi với cả mẹ & cha</h4>
+                <p class="text-sm text-gray-700">✓ Cả 2 phải làm thư ủy quyền đi cùng với người họ hàng trong gia đình</p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- TAB 2: VISA DÁN -->
+        <div id="tab-visadan" class="tab-content">
+          
+          <div class="danger-box mb-6">
+            <p class="font-bold text-lg mb-2">📋 DANH MỤC HỒ SƠ XIN VISA DÁN</p>
+            <p class="text-sm mb-2">Áp dụng cho khách mang quốc tịch Việt Nam</p>
+            <p class="text-sm font-semibold text-red-700">⚠️ Vui lòng sử dụng khổ giấy A4 để in/photo tất cả tài liệu (ngoại trừ hộ chiếu gốc và hình), không được cắt nhỏ</p>
+          </div>
+
+          <!-- 1. Passport - Visa Dán -->
+          <section class="card">
+            <h3 class="section-title">📘 1. Passport (Bản gốc còn thời hạn)</h3>
+            
+            <div class="requirement-item mb-4">
+              <h4 class="font-semibold text-red-600 mb-3">Yêu cầu về Passport:</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Passport còn thời hạn trên <strong>6 tháng</strong> tính từ ngày kết thúc tour</li>
+                <li>Passport nguyên vẹn, không lem bẩn</li>
+                <li>Passport phải có ngày/tháng/năm sinh, <strong class="text-red-600">KHÔNG chấp nhận</strong> passport chỉ có năm sinh hoặc tháng năm sinh</li>
+                <li><strong class="text-red-600">Passport phải có nơi sinh (bắt buộc)</strong></li>
+              </ul>
+            </div>
+            
+            <div class="danger-box">
+              <p class="font-semibold text-red-800 mb-2">🚨 Lưu ý đặc biệt:</p>
+              <p class="text-sm">Tất cả những trường hợp hộ chiếu không có nơi sinh bắt buộc phải có bị chú nơi sinh. Tổng lãnh sự quán Trung Quốc không hỗ trợ bất cứ trường hợp nào không có nơi sinh hoặc không có bị chú nơi sinh trên hộ chiếu.</p>
+            </div>
+          </section>
+
+          <!-- 2. Ảnh - Visa Dán -->
+          <section class="card">
+            <h3 class="section-title">📷 2. Ảnh 4x6 (02 ảnh)</h3>
+            
+            <div class="requirement-item mb-4">
+              <h4 class="font-semibold text-red-600 mb-3">Yêu cầu về ảnh:</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li><strong>Ảnh khác với ảnh trên passport</strong> (nếu passport được cấp trên 03 tháng)</li>
+                <li>Không đeo kính, không đội nón</li>
+                <li>Phông nền trắng, không mặc áo trắng hoặc màu sắc sặc sỡ</li>
+                <li>Không híp mắt, cười hở lợi</li>
+                <li>Chụp thẳng người, nhìn thẳng để 2 bên tai cân đối</li>
+                <li>Vén tóc lên cao để thấy trán và thái dương</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 3. Tờ khai - Visa Dán -->
+          <section class="card">
+            <h3 class="section-title">📝 3. Tờ khai thông tin cá nhân</h3>
+            <div class="info-box">
+              <p class="text-sm text-gray-700">Quý khách vui lòng điền đầy đủ thông tin vào tờ khai thông tin cá nhân (file đính kèm)</p>
+            </div>
+          </section>
+
+          <!-- 4. Giấy tờ quan hệ -->
+          <section class="card">
+            <h3 class="section-title">👨‍👩‍👧‍👦 4. Giấy tờ chứng minh mối quan hệ</h3>
+            
+            <div class="requirement-item mb-4">
+              <h4 class="font-semibold text-blue-600 mb-3">Sao y hoặc bản chính đối chiếu:</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Giấy đăng ký kết hôn (nếu vợ chồng đi cùng nhau)</li>
+                <li>Giấy khai sinh (nếu có con đi cùng bố mẹ)</li>
+              </ul>
+            </div>
+            
+            <div class="danger-box">
+              <p class="font-semibold text-red-800 mb-2">🚨 Quy định đặc biệt cho trẻ em:</p>
+              <ul class="list-disc ml-5 text-sm space-y-2">
+                <li><strong>Trường hợp trẻ em đi với bố HOẶC mẹ:</strong> Bắt buộc phải có thư ủy quyền từ người không đi</li>
+                <li><strong>Trường hợp đi cùng với cả bố VÀ mẹ:</strong> Bắt buộc phải làm cam kết theo mẫu</li>
+                <li class="text-red-600 font-bold">⚠️ Thư ủy quyền bắt buộc phải có mộc đỏ từ Cơ quan Công An</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 5. CMND/CCCD -->
+          <section class="card">
+            <h3 class="section-title">🪪 5. CMND/CCCD/Thẻ chứng minh công dân</h3>
+            <div class="info-box">
+              <p class="text-sm text-gray-700"><strong>Bản sao y hoặc bản chính để đối chiếu</strong> (cả 2 mặt)</p>
+            </div>
+          </section>
+
+          <!-- 6. Xác nhận tạm trú -->
+          <section class="card">
+            <h3 class="section-title">🏠 6. Xác nhận tạm trú</h3>
+            
+            <div class="danger-box mb-4">
+              <p class="font-semibold text-red-800 mb-3">🚨 Yêu cầu bắt buộc:</p>
+              <ul class="list-disc ml-5 text-sm space-y-2">
+                <li>Xác nhận tạm trú (CT07, CT08) bắt buộc phải là <strong>bản gốc & còn thời hạn ít nhất 1 tháng kể từ ngày khởi hành</strong></li>
+                <li>Đối với xác nhận tạm trú dưới 1 năm, Tổng lãnh sự quán Trung Quốc sẽ <strong>không trả lại</strong></li>
+                <li>Đối với trường hợp không đứng tên trên xác nhận cho ông/bà mà chỉ đứng tên kèm theo hộ gia đình sẽ không thể nộp cá nhân mà phải có thành viên đứng tên chính đi kèm</li>
+              </ul>
+            </div>
+            
+            <div class="warning-box">
+              <p class="font-semibold text-orange-800">📍 Lưu ý quan trọng:</p>
+              <p class="text-sm mt-2"><strong>LSQ Trung Quốc tại TP.HCM chỉ chấp nhận những hộ khẩu từ tỉnh Khánh Hòa trở vào Cà Mau</strong></p>
+            </div>
+          </section>
+
+          <!-- 7. Tài chính -->
+          <section class="card">
+            <h3 class="section-title">💰 7. Giấy tờ chứng minh khả năng tài chính</h3>
+            
+            <div class="requirement-item mb-4">
+              <h4 class="font-semibold text-red-600 mb-3">Yêu cầu:</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Giấy xác nhận số dư Sổ Tiết Kiệm còn hạn trong thời gian 1 tháng gần nhất (tài khoản phải từ <strong>50.000.000 VNĐ</strong> trở lên)</li>
+                <li><strong class="text-red-600">KHÔNG nộp sao kê tài khoản</strong></li>
+                <li>Tất cả giấy tờ xác nhận từ ngân hàng bắt buộc là <strong>bản chính</strong></li>
+              </ul>
+            </div>
+            
+            <div class="danger-box">
+              <p class="font-semibold text-red-800 mb-2">🚨 Lưu ý đặc biệt:</p>
+              <p class="text-sm">Xác nhận số dư tài khoản/Sổ tiết kiệm phải trùng khớp với tỉnh/thành phố như trên hộ khẩu/CT07/CT08. Trường hợp xác nhận số dư từ ngân hàng không khớp với địa phương trên hộ khẩu/CT07/CT08 sẽ <strong>KHÔNG được chấp nhận</strong></p>
+            </div>
+          </section>
+
+          <!-- 8. Công việc -->
+          <section class="card">
+            <h3 class="section-title">💼 8. Giấy tờ chứng minh công việc</h3>
+            
+            <div class="space-y-4">
+              <div class="requirement-item">
+                <h4 class="font-semibold text-blue-600 mb-3">Đối với người đi làm:</h4>
+                <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                  <li><strong>Xác nhận công việc bản chính</strong> (KHÔNG nhận Hợp đồng lao động)</li>
+                  <li>Đơn xin nghỉ phép (thể hiện rõ thời gian nghỉ phép đến hết ngày kết thúc chương trình du lịch)</li>
+                </ul>
+                
+                <div class="mt-3 p-3 bg-blue-50 rounded">
+                  <p class="text-sm font-semibold text-blue-800 mb-2">📋 Nội dung xác nhận công tác phải thể hiện:</p>
+                  <ul class="list-disc ml-5 text-xs space-y-1 text-gray-700">
+                    <li>Tên công ty</li>
+                    <li>Địa chỉ công ty</li>
+                    <li>Họ tên người lao động</li>
+                    <li>Ngày/tháng/năm sinh</li>
+                    <li>Chức vụ hiện tại</li>
+                    <li>Thời hạn ký kết hợp đồng</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="requirement-item">
+                <h4 class="font-semibold text-blue-600 mb-3">Đối với học sinh - sinh viên:</h4>
+                <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                  <li>Xác nhận học sinh/sinh viên <strong>bản gốc</strong></li>
+                  <li>Thẻ học sinh/sinh viên sao y công chứng hoặc bản gốc</li>
+                </ul>
+              </div>
+              
+              <div class="requirement-item">
+                <h4 class="font-semibold text-blue-600 mb-3">Đối với người về hưu:</h4>
+                <div class="danger-box">
+                  <p class="text-sm"><strong>Bắt buộc phải có:</strong></p>
+                  <ul class="list-disc ml-5 text-sm mt-2 space-y-1">
+                    <li>Xác nhận lương hưu <strong>bản gốc</strong>, HOẶC</li>
+                    <li>Thẻ hưu trí <strong>bản gốc để đối chiếu</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Lưu ý chung -->
+          <section class="card">
+            <h3 class="section-title">⚠️ Những lưu ý quan trọng</h3>
+            
+            <div class="space-y-4">
+              <div class="danger-box">
+                <p class="font-semibold text-red-800 mb-2">🚨 Về hồ sơ:</p>
+                <ul class="list-disc ml-5 text-sm space-y-2">
+                  <li>Tất cả hồ sơ đều xét cá nhân, mỗi cá nhân đều phải có hồ sơ gốc/sao y theo yêu cầu (kể cả thành viên trong gia đình)</li>
+                  <li><strong>VD:</strong> 1 Gia đình 3 thành viên không nộp chung 1 cuốn hộ khẩu sao y, phải có 3 bản sao y cho cả 3 thành viên. Đối với trường hợp nộp sổ hộ khẩu bản gốc có thể nộp 1 cuốn (bao gồm tên cả 3 thành viên trong hộ khẩu)</li>
+                  <li>Các giấy tờ sao y bắt buộc phải là bản A4, không sao y bản nhỏ và phải còn hạn ít nhất đến hết ngày kết thúc tour</li>
+                </ul>
+              </div>
+              
+              <div class="danger-box">
+                <p class="font-semibold text-red-800 mb-2">🚨 Về nhập cảnh tự động (Autogate):</p>
+                <p class="text-sm">Trường hợp trước đó khách đã từng nhập cảnh bằng cửa tự động (Autogate) bắt buộc phải lên Trung Tâm CVS để lấy vân tay. Nếu khách khai không đúng sự thật có thể bị từ chối xét hồ sơ & bị cấm nhập cảnh vào Trung Quốc. <strong>(Mục 23 form khai thông tin)</strong></p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Thông tin tổng hợp -->
+        <section class="card">
+          <h3 class="section-title">📝 Thông tin tổng hợp</h3>
+          
+          <div class="space-y-4">
+            <div class="bg-gradient-to-r from-red-50 to-rose-50 border-2 border-red-200 rounded-lg p-4">
+              <h4 class="font-bold text-red-800 mb-3">🎯 So sánh 2 loại visa</h4>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-white p-3 rounded border border-red-200">
+                  <p class="font-bold text-red-700 mb-2">🚢 Visa Đoàn Thể - Cửa Khẩu</p>
+                  <ul class="list-disc ml-5 text-xs space-y-1">
+                    <li>Hồ sơ đơn giản hơn</li>
+                    <li>Scan cả cuốn passport</li>
+                    <li>02 ảnh 4x6</li>
+                    <li>Không yêu cầu giấy tờ tài chính</li>
+                    <li>Phù hợp cho đoàn du lịch</li>
+                  </ul>
+                </div>
+                <div class="bg-white p-3 rounded border border-red-200">
+                  <p class="font-bold text-red-700 mb-2">📋 Visa Dán</p>
+                  <ul class="list-disc ml-5 text-xs space-y-1">
+                    <li>Hồ sơ đầy đủ và chi tiết</li>
+                    <li>Yêu cầu giấy tờ tài chính (≥50 triệu VNĐ)</li>
+                    <li>Yêu cầu xác nhận công việc</li>
+                    <li>Yêu cầu xác nhận tạm trú</li>
+                    <li>Chỉ áp dụng hộ khẩu từ Khánh Hòa - Cà Mau</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-lg p-4">
+              <h4 class="font-bold text-orange-800 mb-3">⚠️ Những điều tuyệt đối cần nhớ</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li><strong class="text-red-600">Passport bắt buộc phải có nơi sinh hoặc bị chú nơi sinh</strong></li>
+                <li><strong class="text-red-600">Ảnh phải khác với ảnh trong passport</strong></li>
+                <li>Tất cả giấy tờ phải khổ A4, không cắt nhỏ</li>
+                <li>Mỗi thành viên phải có bộ hồ sơ riêng (không dùng chung)</li>
+                <li>Visa Dán: Số dư tài khoản ≥ 50 triệu VNĐ và phải khớp với địa phương trên hộ khẩu</li>
+                <li>Thư ủy quyền trẻ em phải có mộc đỏ Công An</li>
+                <li>Từng dùng Autogate phải lấy vân tay tại CVS</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gradient-to-r from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-lg p-4">
+              <h4 class="font-bold text-blue-800 mb-3">✅ Quy trình xin visa</h4>
+              <ol class="list-decimal ml-5 text-sm space-y-2 text-gray-700">
+                <li>Chọn loại visa phù hợp (Cửa Khẩu hoặc Visa Dán)</li>
+                <li>Kiểm tra passport (còn hạn >6 tháng, có nơi sinh)</li>
+                <li>Chụp ảnh 4x6 đúng quy cách (khác ảnh passport)</li>
+                <li>Chuẩn bị hồ sơ theo yêu cầu từng loại visa</li>
+                <li>Nộp hồ sơ tại Phòng Visa STS TP.HCM</li>
+                <li>Chờ kết quả 2-7 ngày làm việc</li>
+              </ol>
+            </div>
+            
+            <div class="info-box">
+              <p class="font-semibold mb-2">📞 Liên hệ hỗ trợ:</p>
+              <p class="text-sm">Mọi thắc mắc về hồ sơ visa Trung Quốc, vui lòng liên hệ:</p>
+              <ul class="list-disc ml-5 text-sm mt-2 space-y-1">
+                <li><strong>Phòng Visa STS TP.HCM</strong></li>
+                <li>Nhân viên tư vấn sẽ hướng dẫn chi tiết và hỗ trợ hoàn thiện hồ sơ</li>
+              </ul>
+            </div>
+            
+            <div class="warning-box">
+              <p class="font-semibold">💡 Ghi chú cuối cùng:</p>
+              <p class="text-sm mt-2">Thủ tục visa có thể thay đổi hoặc LSQ có thể yêu cầu bổ sung thêm giấy tờ khác. Quý khách nên liên hệ trước khi chuẩn bị hồ sơ để cập nhật thông tin mới nhất.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>		
 </main>
 
 <!-- PHẦN DƯỚI -->
