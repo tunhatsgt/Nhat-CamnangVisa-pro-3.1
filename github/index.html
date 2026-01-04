@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tứ Nhật - Visa · Cẩm nang hồ sơ Visa quốc tế V3.1 . updated 29/12/2025 </title>
+  <title>Tứ Nhật - Visa · Cẩm nang hồ sơ Visa quốc tế V3.1.2 . updated 04/01/2026 </title>
   <meta name="description" content="Cẩm nang hồ sơ Visa quốc tế - Tra cứu thủ tục visa, hồ sơ và quy trình xin visa chi tiết cho từng quốc gia.">
   <link rel="manifest" href="./manifest.json">
   <link rel="icon" href="./favicon.ico" sizes="any">
@@ -934,7 +934,7 @@
   </div>
 </div>
  
-    <div class="border-t mt-4 pt-4 text-xs text-gray-500">@Nhật - Phiên bản V3.1 . updated 29/12/2025 </div>
+    <div class="border-t mt-4 pt-4 text-xs text-gray-500">@Nhật - Phiên bản V3.1.2 . updated 04/01/2026 </div>
     <div class="border-t mt-4 pt-4 text-xs text-gray-500">Liên hệ: 0366.432.416</div>
   </nav>
 </aside>
@@ -2348,7 +2348,42 @@
             </div>
           </div>
         </div>
-        
+                      <!-- Phân quyền khu vực -->
+              <div class="mt-6">
+                <h4 class="font-bold text-lg mb-3">🗺️ Phân quyền khu vực xét duyệt</h4>
+                <div class="bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-300 p-4 rounded-lg">
+                  <div class="flex items-start gap-2 mb-3">
+                    <span class="text-2xl">⚠️</span>
+                    <div>
+                      <p class="font-bold text-red-800 mb-2">Quy định quan trọng về CCCD và phân quyền:</p>
+                      <ul class="list-disc ml-5 text-sm space-y-2 text-gray-800">
+                        <li><strong>CCCD là BẮT BUỘC</strong> trong hồ sơ</li>
+                        <li>Người có địa chỉ trên CCCD <strong>không thuộc vùng xét của HCM</strong> phải có:
+                          <ul class="list-circle ml-5 mt-1 space-y-1">
+                            <li>Giấy xác nhận cư trú (CT07/CT08) tại HCM, HOẶC</li>
+                            <li>Hợp đồng lao động tại HCM <strong>trên 6 tháng</strong></li>
+                          </ul>
+                        </li>
+                        <li><strong>Sổ tiết kiệm phải mở trên 1 năm</strong> (quy định mới có hiệu lực gần đây)</li>
+                        <li>Khu vực phân quyền cần <strong>gửi danh sách xin lịch trước</strong></li>
+                        <li>Nếu đoàn có <strong>trên 2 trường hợp không đúng phân quyền</strong> → phải có <strong>sự đồng ý của Lãnh sự</strong> mới nộp được</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <!-- Nút xem bản đồ phân quyền -->
+                  <button 
+                    onclick="openJurisdictionMap()" 
+                    class="mt-3 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                    </svg>
+                    Xem bản đồ phân quyền khu vực
+                  </button>
+                </div>
+              </div>
+            </div>
+
         <div>
           <h4 class="font-bold text-lg mb-3">Thời gian & Lưu ý</h4>
           <div class="info-box">
@@ -3031,6 +3066,114 @@
   </div>
 </div>
   </div>
+
+  <!-- Modal xem bản đồ phân quyền -->
+  <div id="jurisdiction-map-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden z-[10000] flex items-center justify-center p-4" onclick="closeJurisdictionMap(event)">
+    <div class="bg-white rounded-lg max-w-5xl w-full max-h-[90vh] overflow-auto" onclick="event.stopPropagation()">
+      <div class="sticky top-0 bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-4 rounded-t-lg flex items-center justify-between z-10">
+        <h3 class="text-xl font-bold">🗺️ Bản đồ phân quyền khu vực - Lãnh sự quán Ý tại Việt Nam</h3>
+        <button onclick="closeJurisdictionMap()" class="text-white hover:bg-white hover:bg-opacity-20 rounded-full w-8 h-8 flex items-center justify-center transition-colors">
+          <span class="text-2xl">×</span>
+        </button>
+      </div>
+  <div class="p-6">
+    <!-- Chú thích -->
+    <div class="mb-4 bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+      <p class="font-semibold text-blue-900 mb-2">📍 Chú thích màu sắc:</p>
+      <div class="grid md:grid-cols-2 gap-3 text-sm">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 bg-blue-400 rounded"></div>
+          <span><strong>Màu xanh:</strong> Thuộc quyền xét duyệt của Lãnh sự quán Ý tại TP. HCM</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 bg-red-400 rounded"></div>
+          <span><strong>Màu đỏ:</strong> Thuộc quyền xét duyệt của Lãnh sự quán Ý tại Hà Nội</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Container hình ảnh với zoom -->
+    <div class="relative bg-gray-100 rounded-lg overflow-hidden">
+      <div id="map-zoom-container" class="overflow-auto" style="max-height: 70vh;">
+        <img 
+          id="jurisdiction-map-image" 
+          src="./bandoy.jpg" 
+          alt="Bản đồ phân quyền Lãnh sự quán Ý" 
+          class="w-full h-auto transition-transform duration-200 cursor-zoom-in"
+          style="transform-origin: top left;"
+        />
+      </div>
+      
+      <!-- Điều khiển zoom -->
+      <div class="absolute bottom-4 right-4 flex flex-col gap-2 bg-white rounded-lg shadow-lg p-2">
+        <button 
+          onclick="zoomMap(1.2)" 
+          class="bg-indigo-600 hover:bg-indigo-700 text-white w-10 h-10 rounded flex items-center justify-center transition-colors"
+          title="Phóng to">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path>
+          </svg>
+        </button>
+        <button 
+          onclick="zoomMap(0.833)" 
+          class="bg-indigo-600 hover:bg-indigo-700 text-white w-10 h-10 rounded flex items-center justify-center transition-colors"
+          title="Thu nhỏ">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7"></path>
+          </svg>
+        </button>
+        <button 
+          onclick="resetMapZoom()" 
+          class="bg-gray-600 hover:bg-gray-700 text-white w-10 h-10 rounded flex items-center justify-center transition-colors"
+          title="Đặt lại">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Thông tin chi tiết -->
+    <div class="mt-6 grid md:grid-cols-2 gap-4">
+      <div class="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
+        <h4 class="font-bold text-blue-800 mb-3 flex items-center gap-2">
+          <span class="text-xl">🏛️</span>
+          Lãnh sự quán Ý tại HCM (Khu vực phía Nam)
+        </h4>
+        <p class="text-sm text-gray-700 mb-2"><strong>Phụ trách các tỉnh/thành màu xanh trên bản đồ</strong></p>
+        <ul class="text-xs text-gray-600 space-y-1 ml-4 list-disc">
+          <li>TP. Hồ Chí Minh và các tỉnh miền Đông Nam Bộ</li>
+          <li>Các tỉnh miền Tây Nam Bộ</li>
+          <li>Một số tỉnh miền Trung (vùng ven biển phía Nam)</li>
+        </ul>
+      </div>
+      
+      <div class="bg-red-50 border-2 border-red-200 rounded-lg p-4">
+        <h4 class="font-bold text-red-800 mb-3 flex items-center gap-2">
+          <span class="text-xl">🏛️</span>
+          Lãnh sự quán Ý tại Hà Nội (Khu vực phía Bắc)
+        </h4>
+        <p class="text-sm text-gray-700 mb-2"><strong>Phụ trách các tỉnh/thành màu đỏ trên bản đồ</strong></p>
+        <ul class="text-xs text-gray-600 space-y-1 ml-4 list-disc">
+          <li>Hà Nội và các tỉnh miền Bắc</li>
+          <li>Các tỉnh Tây Bắc, Đông Bắc</li>
+          <li>Các tỉnh miền Trung (phía Bắc)</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Lưu ý quan trọng -->
+    <div class="mt-4 bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+      <p class="font-semibold text-yellow-800 mb-2">⚠️ Lưu ý quan trọng:</p>
+      <ul class="text-sm text-gray-700 space-y-1 list-disc ml-5">
+        <li>Địa chỉ trên <strong>CCCD</strong> quyết định bạn thuộc quyền xét duyệt của Lãnh sự quán nào</li>
+        <li>Nếu CCCD không thuộc vùng HCM nhưng muốn nộp tại HCM → cần CT07/CT08 hoặc HĐLĐ trên 6 tháng</li>
+        <li>Đoàn có trên 2 người không đúng phân quyền → cần xin phép Lãnh sự trước khi nộp</li>
+      </ul>
+    </div>
+  </div>
+</div>
+    </div>
 
  <!-- Modal Đức -->
   <div id="modal-germany" class="modal">
@@ -8879,7 +9022,7 @@
             <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
               <p class="font-semibold mb-2">⭐ Trường hợp đặc biệt:</p>
               <ul class="list-disc ml-5 text-sm space-y-2">
-                <li>Nếu đã được cấp visa nhưng hủy tour, đơn vị lữ hành sẽ thu lại hộ chiếu và báo cáo bằng công văn cho Lãnh sự quán. → Visa sẽ bị đóng dấu hủy và bạn phải giải trình khi xin lại lần sau.</li>
+                <li>Nếu đã được cấp visa nhưng hủy tour, Lữ hành Saigontourist sẽ thu lại hộ chiếu và báo cáo bằng công văn cho Lãnh sự quán. → Visa sẽ bị đóng dấu hủy và bạn phải giải trình khi xin lại lần sau.</li>
                 <li>Nếu gương mặt thay đổi nhiều sau phẫu thuật thẩm mỹ, nên làm hộ chiếu mới. Nếu cố tình dùng ảnh cũ thì có khả năng bị từ chối nhập cảnh.</li>
               </ul>
             </div>
@@ -11259,8 +11402,8 @@
         <div class="flex items-center gap-4">
           <span class="text-6xl">🇮🇳</span>
           <div>
-            <h2 class="text-3xl font-bold text-600">Visa Ấn Độ (India)</h2>
-            <p class="text-500 mt-2">Hướng dẫn chi tiết hồ sơ e-visa Ấn Độ</p>
+            <h2 class="text-3xl font-bold text-orange-600">Visa Ấn Độ (India)</h2>
+            <p class="text-orange-500 mt-2">Hướng dẫn chi tiết hồ sơ e-visa Ấn Độ</p>
           </div>
         </div>
       </div>
@@ -11624,12 +11767,22 @@
           </div>
         </section>
 
+        <!-- Tab Navigation -->
+        <div class="tab-buttons">
+          <button class="tab-button active" onclick="switchTab('cuakhau')">
+            🚢 Visa Đoàn Thể - Cửa Khẩu
+          </button>
+          <button class="tab-button" onclick="switchTab('visadan')">
+            📋 Visa Dán
+          </button>
+        </div>
+
         <!-- TAB 1: VISA ĐOÀN THỂ - CỬA KHẨU -->
         <div id="tab-cuakhau" class="tab-content active">
           
           <div class="danger-box mb-6">
             <p class="font-bold text-lg mb-2">🚢 HỒ SƠ XIN VISA ĐOÀN THỂ - CỬA KHẨU</p>
-            <p class="text-sm">Loại visa cho các đoàn du lịchc</p>
+            <p class="text-sm">Loại visa phù hợp cho các đoàn du lịch có tổ chức</p>
           </div>
 
           <!-- 1. Passport - Cửa Khẩu -->
@@ -11670,7 +11823,7 @@
           <section class="card">
             <h3 class="section-title">📝 3. Tờ khai thông tin cá nhân</h3>
             <div class="info-box">
-              <p class="text-sm text-gray-700">Điền đầy đủ thông tin vào tờ khai thông tin cá nhân</p>
+              <p class="text-sm text-gray-700">Quý khách vui lòng điền đầy đủ thông tin vào tờ khai thông tin cá nhân (file đính kèm)</p>
             </div>
           </section>
 
@@ -11744,7 +11897,7 @@
           <section class="card">
             <h3 class="section-title">📝 3. Tờ khai thông tin cá nhân</h3>
             <div class="info-box">
-              <p class="text-sm text-gray-700">Điền đầy đủ thông tin vào tờ khai thông tin cá nhân</p>
+              <p class="text-sm text-gray-700">Quý khách vui lòng điền đầy đủ thông tin vào tờ khai thông tin cá nhân (file đính kèm)</p>
             </div>
           </section>
 
@@ -11885,7 +12038,72 @@
 
         </div>
 
-           <div class="warning-box">
+        <!-- Thông tin tổng hợp -->
+        <section class="card">
+          <h3 class="section-title">📝 Thông tin tổng hợp</h3>
+          
+          <div class="space-y-4">
+            <div class="bg-gradient-to-r from-red-50 to-rose-50 border-2 border-red-200 rounded-lg p-4">
+              <h4 class="font-bold text-red-800 mb-3">🎯 So sánh 2 loại visa</h4>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-white p-3 rounded border border-red-200">
+                  <p class="font-bold text-red-700 mb-2">🚢 Visa Đoàn Thể - Cửa Khẩu</p>
+                  <ul class="list-disc ml-5 text-xs space-y-1">
+                    <li>Hồ sơ đơn giản hơn</li>
+                    <li>Scan cả cuốn passport</li>
+                    <li>02 ảnh 4x6</li>
+                    <li>Không yêu cầu giấy tờ tài chính</li>
+                    <li>Phù hợp cho đoàn du lịch</li>
+                  </ul>
+                </div>
+                <div class="bg-white p-3 rounded border border-red-200">
+                  <p class="font-bold text-red-700 mb-2">📋 Visa Dán</p>
+                  <ul class="list-disc ml-5 text-xs space-y-1">
+                    <li>Hồ sơ đầy đủ và chi tiết</li>
+                    <li>Yêu cầu giấy tờ tài chính (≥50 triệu VNĐ)</li>
+                    <li>Yêu cầu xác nhận công việc</li>
+                    <li>Yêu cầu xác nhận tạm trú</li>
+                    <li>Chỉ áp dụng hộ khẩu từ Khánh Hòa - Cà Mau</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-lg p-4">
+              <h4 class="font-bold text-orange-800 mb-3">⚠️ Những điều tuyệt đối cần nhớ</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li><strong class="text-red-600">Passport bắt buộc phải có nơi sinh hoặc bị chú nơi sinh</strong></li>
+                <li><strong class="text-red-600">Ảnh phải khác với ảnh trong passport</strong></li>
+                <li>Tất cả giấy tờ phải khổ A4, không cắt nhỏ</li>
+                <li>Mỗi thành viên phải có bộ hồ sơ riêng (không dùng chung)</li>
+                <li>Visa Dán: Số dư tài khoản ≥ 50 triệu VNĐ và phải khớp với địa phương trên hộ khẩu</li>
+                <li>Thư ủy quyền trẻ em phải có mộc đỏ Công An</li>
+                <li>Từng dùng Autogate phải lấy vân tay tại CVS</li>
+              </ul>
+            </div>
+            
+            <div class="bg-gradient-to-r from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-lg p-4">
+              <h4 class="font-bold text-blue-800 mb-3">✅ Quy trình xin visa</h4>
+              <ol class="list-decimal ml-5 text-sm space-y-2 text-gray-700">
+                <li>Chọn loại visa phù hợp (Cửa Khẩu hoặc Visa Dán)</li>
+                <li>Kiểm tra passport (còn hạn >6 tháng, có nơi sinh)</li>
+                <li>Chụp ảnh 4x6 đúng quy cách (khác ảnh passport)</li>
+                <li>Chuẩn bị hồ sơ theo yêu cầu từng loại visa</li>
+                <li>Nộp hồ sơ tại Phòng Visa STS TP.HCM</li>
+                <li>Chờ kết quả 2-7 ngày làm việc</li>
+              </ol>
+            </div>
+            
+            <div class="info-box">
+              <p class="font-semibold mb-2">📞 Liên hệ hỗ trợ:</p>
+              <p class="text-sm">Mọi thắc mắc về hồ sơ visa Trung Quốc, vui lòng liên hệ:</p>
+              <ul class="list-disc ml-5 text-sm mt-2 space-y-1">
+                <li><strong>Phòng Visa STS TP.HCM</strong></li>
+                <li>Nhân viên tư vấn sẽ hướng dẫn chi tiết và hỗ trợ hoàn thiện hồ sơ</li>
+              </ul>
+            </div>
+            
+            <div class="warning-box">
               <p class="font-semibold">💡 Ghi chú cuối cùng:</p>
               <p class="text-sm mt-2">Thủ tục visa có thể thay đổi hoặc LSQ có thể yêu cầu bổ sung thêm giấy tờ khác. Quý khách nên liên hệ trước khi chuẩn bị hồ sơ để cập nhật thông tin mới nhất.</p>
             </div>
@@ -11894,18 +12112,224 @@
 
       </div>
     </div>
-  </div>		
+  </div>
+
+  <!-- Modal xem bản đồ phân quyền -->
+  <div id="jurisdiction-map-modal" class="fixed inset-0 bg-black bg-opacity-75 hidden z-[10000] flex items-center justify-center p-4" onclick="closeJurisdictionMap(event)">
+    <div class="bg-white rounded-lg max-w-5xl w-full max-h-[90vh] overflow-auto" onclick="event.stopPropagation()">
+      <div class="sticky top-0 bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-4 rounded-t-lg flex items-center justify-between z-10">
+        <h3 class="text-xl font-bold">🗺️ Bản đồ phân quyền khu vực - Lãnh sự quán Ý tại Việt Nam</h3>
+        <button onclick="closeJurisdictionMap()" class="text-white hover:bg-white hover:bg-opacity-20 rounded-full w-8 h-8 flex items-center justify-center transition-colors">
+          <span class="text-2xl">×</span>
+        </button>
+      </div>
+  <div class="p-6">
+    <!-- Chú thích -->
+    <div class="mb-4 bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+      <p class="font-semibold text-blue-900 mb-2">📍 Chú thích màu sắc:</p>
+      <div class="grid md:grid-cols-2 gap-3 text-sm">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 bg-blue-400 rounded"></div>
+          <span><strong>Màu xanh:</strong> Thuộc quyền xét duyệt của Lãnh sự quán Ý tại TP. HCM</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 bg-red-400 rounded"></div>
+          <span><strong>Màu đỏ:</strong> Thuộc quyền xét duyệt của Lãnh sự quán Ý tại Hà Nội</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Container hình ảnh với zoom -->
+    <div class="relative bg-gray-100 rounded-lg overflow-hidden">
+      <div id="map-zoom-container" class="overflow-auto" style="max-height: 70vh;">
+        <img 
+          id="jurisdiction-map-image" 
+          src="https://i.imgur.com/kzQPM3T.png" 
+          alt="Bản đồ phân quyền Lãnh sự quán Ý" 
+          class="w-full h-auto transition-transform duration-200 cursor-zoom-in"
+          style="transform-origin: top left;"
+        />
+      </div>
+      
+      <!-- Điều khiển zoom -->
+      <div class="absolute bottom-4 right-4 flex flex-col gap-2 bg-white rounded-lg shadow-lg p-2">
+        <button 
+          onclick="zoomMap(1.2)" 
+          class="bg-indigo-600 hover:bg-indigo-700 text-white w-10 h-10 rounded flex items-center justify-center transition-colors"
+          title="Phóng to">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"></path>
+          </svg>
+        </button>
+        <button 
+          onclick="zoomMap(0.833)" 
+          class="bg-indigo-600 hover:bg-indigo-700 text-white w-10 h-10 rounded flex items-center justify-center transition-colors"
+          title="Thu nhỏ">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7"></path>
+          </svg>
+        </button>
+        <button 
+          onclick="resetMapZoom()" 
+          class="bg-gray-600 hover:bg-gray-700 text-white w-10 h-10 rounded flex items-center justify-center transition-colors"
+          title="Đặt lại">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Thông tin chi tiết -->
+    <div class="mt-6 grid md:grid-cols-2 gap-4">
+      <div class="bg-blue-50 border-2 border-blue-200 rounded-lg p-4">
+        <h4 class="font-bold text-blue-800 mb-3 flex items-center gap-2">
+          <span class="text-xl">🏛️</span>
+          Lãnh sự quán Ý tại HCM (Khu vực phía Nam)
+        </h4>
+        <p class="text-sm text-gray-700 mb-2"><strong>Phụ trách các tỉnh/thành màu xanh trên bản đồ</strong></p>
+        <ul class="text-xs text-gray-600 space-y-1 ml-4 list-disc">
+          <li>TP. Hồ Chí Minh và các tỉnh miền Đông Nam Bộ</li>
+          <li>Các tỉnh miền Tây Nam Bộ</li>
+          <li>Một số tỉnh miền Trung (vùng ven biển phía Nam)</li>
+        </ul>
+      </div>
+      
+      <div class="bg-red-50 border-2 border-red-200 rounded-lg p-4">
+        <h4 class="font-bold text-red-800 mb-3 flex items-center gap-2">
+          <span class="text-xl">🏛️</span>
+          Lãnh sự quán Ý tại Hà Nội (Khu vực phía Bắc)
+        </h4>
+        <p class="text-sm text-gray-700 mb-2"><strong>Phụ trách các tỉnh/thành màu đỏ trên bản đồ</strong></p>
+        <ul class="text-xs text-gray-600 space-y-1 ml-4 list-disc">
+          <li>Hà Nội và các tỉnh miền Bắc</li>
+          <li>Các tỉnh Tây Bắc, Đông Bắc</li>
+          <li>Các tỉnh miền Trung (phía Bắc)</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Lưu ý quan trọng -->
+    <div class="mt-4 bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
+      <p class="font-semibold text-yellow-800 mb-2">⚠️ Lưu ý quan trọng:</p>
+      <ul class="text-sm text-gray-700 space-y-1 list-disc ml-5">
+        <li>Địa chỉ trên <strong>CCCD</strong> quyết định bạn thuộc quyền xét duyệt của Lãnh sự quán nào</li>
+        <li>Nếu CCCD không thuộc vùng HCM nhưng muốn nộp tại HCM → cần CT07/CT08 hoặc HĐLĐ trên 6 tháng</li>
+        <li>Đoàn có trên 2 người không đúng phân quyền → cần xin phép Lãnh sự trước khi nộp</li>
+      </ul>
+    </div>
+  </div>
+</div>
+    </div>
+  <script>
+    let currentZoom = 1;
+    
+    
+    // Jurisdiction map functions
+    function openJurisdictionMap() {
+      document.getElementById('jurisdiction-map-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      resetMapZoom();
+    }
+    
+    function closeJurisdictionMap(event) {
+      if (!event || event.target.id === 'jurisdiction-map-modal') {
+        document.getElementById('jurisdiction-map-modal').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+    }
+    
+    function zoomMap(factor) {
+      currentZoom *= factor;
+      currentZoom = Math.max(1, Math.min(currentZoom, 3)); // Giới hạn zoom từ 1x đến 3x
+      const img = document.getElementById('jurisdiction-map-image');
+      img.style.transform = `scale(${currentZoom})`;
+      img.style.cursor = currentZoom > 1 ? 'zoom-out' : 'zoom-in';
+    }
+    
+    function resetMapZoom() {
+      currentZoom = 1;
+      const img = document.getElementById('jurisdiction-map-image');
+      img.style.transform = 'scale(1)';
+      img.style.cursor = 'zoom-in';
+      document.getElementById('map-zoom-container').scrollTop = 0;
+      document.getElementById('map-zoom-container').scrollLeft = 0;
+    }
+    
+    // Filter functions
+    function filterItems(country, group) {
+      const searchInput = document.getElementById(country + '-' + group + '-search');
+      const filterSelect = document.getElementById(country + '-' + group + '-filter');
+      const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+      const filterValue = filterSelect ? filterSelect.value : 'all';
+      
+      const items = document.querySelectorAll(`[data-country="${country}"][data-group="${group}"]`);
+      
+      items.forEach(item => {
+        const itemValue = item.getAttribute('data-item');
+        const itemText = item.textContent.toLowerCase();
+        
+        const matchesSearch = searchTerm === '' || itemText.includes(searchTerm);
+        const matchesFilter = filterValue === 'all' || itemValue === filterValue;
+        
+        if (matchesSearch && matchesFilter) {
+          item.classList.remove('hidden-item');
+        } else {
+          item.classList.add('hidden-item');
+        }
+      });
+    }
+    
+    function showAllItems(country, group) {
+      const items = document.querySelectorAll(`[data-country="${country}"][data-group="${group}"]`);
+      items.forEach(item => item.classList.remove('hidden-item'));
+    }
+    
+    function resetFilter(country, group) {
+      const searchInput = document.getElementById(country + '-' + group + '-search');
+      const filterSelect = document.getElementById(country + '-' + group + '-filter');
+      
+      if (searchInput) searchInput.value = '';
+      if (filterSelect) filterSelect.value = 'all';
+      
+      showAllItems(country, group);
+    }
+    
+    // Click vào ảnh để zoom
+    document.addEventListener('DOMContentLoaded', function() {
+      const img = document.getElementById('jurisdiction-map-image');
+      if (img) {
+        img.addEventListener('click', function() {
+          if (currentZoom === 1) {
+            zoomMap(1.5);
+          } else {
+            resetMapZoom();
+          }
+        });
+      }
+    });
+    
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+  </script>		
 </main>
 
 <!-- PHẦN DƯỚI -->
   <footer class="text-center py-4 text-gray-600">
-    <p>© 2025 Tứ Nhật - Visa · Cẩm nang hồ sơ V3.1 . updated 29/12/2025 </p>
+    <p>© 2025 Tứ Nhật - Visa · Cẩm nang hồ sơ V3.1.2 . updated 04/01/2026 </p>
 <p> Tất cả thông tin mang tính tham khảo, cần kiểm tra lại với chuyên viên Visa với từng nước để biết yêu cầu cụ thể chính xác cho từng trường hợp.</p>
     <p class="text-sm mt-2">Kiểm tra yêu cầu Đại sứ quán/Lãnh sự quán trước khi nộp hồ sơ</p>
     <p class="text-sm mt-2">Liên hệ kỹ thuật: 0366.432.416</p>
   </footer>
 
 <!-- JAVA ADDED -->
+
+
 
   <script>
     // Menu Toggle
@@ -11965,6 +12389,92 @@ document.addEventListener('keydown', function(e) {
     });
   }
 });
+
+
+
+    // Jurisdiction map functions
+    function openJurisdictionMap() {
+      document.getElementById('jurisdiction-map-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      resetMapZoom();
+    }
+    
+    function closeJurisdictionMap(event) {
+      if (!event || event.target.id === 'jurisdiction-map-modal') {
+        document.getElementById('jurisdiction-map-modal').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+    }
+    
+    function zoomMap(factor) {
+      currentZoom *= factor;
+      currentZoom = Math.max(1, Math.min(currentZoom, 3)); // Giới hạn zoom từ 1x đến 3x
+      const img = document.getElementById('jurisdiction-map-image');
+      img.style.transform = `scale(${currentZoom})`;
+      img.style.cursor = currentZoom > 1 ? 'zoom-out' : 'zoom-in';
+    }
+    
+    function resetMapZoom() {
+      currentZoom = 1;
+      const img = document.getElementById('jurisdiction-map-image');
+      img.style.transform = 'scale(1)';
+      img.style.cursor = 'zoom-in';
+      document.getElementById('map-zoom-container').scrollTop = 0;
+      document.getElementById('map-zoom-container').scrollLeft = 0;
+    }
+    
+    // Filter functions
+    function filterItems(country, group) {
+      const searchInput = document.getElementById(country + '-' + group + '-search');
+      const filterSelect = document.getElementById(country + '-' + group + '-filter');
+      const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+      const filterValue = filterSelect ? filterSelect.value : 'all';
+      
+      const items = document.querySelectorAll(`[data-country="${country}"][data-group="${group}"]`);
+      
+      items.forEach(item => {
+        const itemValue = item.getAttribute('data-item');
+        const itemText = item.textContent.toLowerCase();
+        
+        const matchesSearch = searchTerm === '' || itemText.includes(searchTerm);
+        const matchesFilter = filterValue === 'all' || itemValue === filterValue;
+        
+        if (matchesSearch && matchesFilter) {
+          item.classList.remove('hidden-item');
+        } else {
+          item.classList.add('hidden-item');
+        }
+      });
+    }
+    
+    function showAllItems(country, group) {
+      const items = document.querySelectorAll(`[data-country="${country}"][data-group="${group}"]`);
+      items.forEach(item => item.classList.remove('hidden-item'));
+    }
+    
+    function resetFilter(country, group) {
+      const searchInput = document.getElementById(country + '-' + group + '-search');
+      const filterSelect = document.getElementById(country + '-' + group + '-filter');
+      
+      if (searchInput) searchInput.value = '';
+      if (filterSelect) filterSelect.value = 'all';
+      
+      showAllItems(country, group);
+    }
+    
+    // Click vào ảnh để zoom
+    document.addEventListener('DOMContentLoaded', function() {
+      const img = document.getElementById('jurisdiction-map-image');
+      if (img) {
+        img.addEventListener('click', function() {
+          if (currentZoom === 1) {
+            zoomMap(1.5);
+          } else {
+            resetMapZoom();
+          }
+        });
+      }
+    });
 
 // Filter and Search functions
 function filterItems(country, group) {
