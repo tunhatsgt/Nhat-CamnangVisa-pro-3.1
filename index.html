@@ -207,7 +207,6 @@
 
     <div class="features">
       <div class="feature-item"><span class="feature-icon">✨</span><span>Truy cập nhanh từ màn hình chính</span></div>
-      <div class="feature-item"><span class="feature-icon">📴</span><span>Hoạt động offline</span></div>
       <div class="feature-item"><span class="feature-icon">🔔</span><span>Nhận thông báo cập nhật</span></div>
       <div class="feature-item"><span class="feature-icon">⚡</span><span>Tải trang nhanh hơn</span></div>
     </div>
@@ -238,9 +237,7 @@
       const ua = navigator.userAgent.toLowerCase();
       if (/iphone|ipad|ipod/.test(ua)) return "ios";
       if (/android/.test(ua)) return "android";
-      if (/windows/.test(ua)) return "windows";
       if (/mac/.test(ua)) return "macos";
-      return "desktop";
     }
 
     function showPlatformInstructions(platform) {
@@ -259,13 +256,6 @@
           3. Hoặc <strong>"Cài đặt ứng dụng"</strong><br><br>
           Ứng dụng sẽ hoạt động như app thật!
         `,
-        windows: `
-          <strong>💻 Cài đặt trên Windows:</strong><br><br>
-          1. Nhấn biểu tượng <strong>⊕ Cài đặt</strong> trên thanh địa chỉ<br>
-          2. Hoặc Menu (⋮) → <strong>"Cài đặt Nhật-Visa..."</strong><br>
-          3. Nhấn <strong>"Cài đặt"</strong><br><br>
-          App sẽ chạy như phần mềm desktop riêng!
-        `,
         macos: `
           <strong>💻 Cài đặt trên macOS:</strong><br><br>
           Trên Chrome/Edge:<br>
@@ -273,12 +263,6 @@
           2. Hoặc Menu → <strong>"Cài đặt Nhật-Visa..."</strong><br><br>
           Trên Safari:<br>
           File → <strong>Thêm vào Dock</strong>
-        `,
-        desktop: `
-          <strong>💻 Cài đặt trên máy tính:</strong><br><br>
-          1. Nhấn biểu tượng <strong>⊕ Cài đặt</strong> trên thanh địa chỉ<br>
-          2. Hoặc vào Menu trình duyệt → <strong>"Cài đặt"</strong><br><br>
-          Ứng dụng sẽ mở trong cửa sổ riêng!
         `
       };
       showStatus(instructions[platform] || "Hướng dẫn cài đặt không xác định.", "info");
@@ -360,4 +344,3 @@
   </script>
 </body>
 </html>
-
