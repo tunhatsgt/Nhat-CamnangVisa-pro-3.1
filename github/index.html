@@ -11318,6 +11318,7 @@
       <div class="modal-body">
         
         <!-- Thông tin cơ bản -->
+        <li><span class="font-normal">
         <section class="card">
           <h3 class="section-title">📋 Thông tin cơ bản</h3>
           
@@ -11361,19 +11362,7 @@
           </div>
         </section>
 
-        <!-- Tab Navigation -->
-        <div class="tab-buttons">
-          <button class="tab-button active" onclick="switchTab('cuakhau')">
-            🚢 Visa Đoàn Thể - Cửa Khẩu
-          </button>
-          <button class="tab-button" onclick="switchTab('visadan')">
-            📋 Visa Dán
-          </button>
-        </div>
-
-        <!-- TAB 1: VISA ĐOÀN THỂ - CỬA KHẨU -->
-        <div id="tab-cuakhau" class="tab-content active">
-          
+        
           <div class="danger-box mb-6">
             <p class="font-bold text-lg mb-2">🚢 HỒ SƠ XIN VISA ĐOÀN THỂ - CỬA KHẨU</p>
             <p class="text-sm">Loại visa phù hợp cho các đoàn du lịch có tổ chức</p>
@@ -11439,11 +11428,7 @@
             </div>
           </section>
 
-        </div>
-
-        <!-- TAB 2: VISA DÁN -->
-        <div id="tab-visadan" class="tab-content">
-          
+       
           <div class="danger-box mb-6">
             <p class="font-bold text-lg mb-2">📋 DANH MỤC HỒ SƠ XIN VISA DÁN</p>
             <p class="text-sm mb-2">Áp dụng cho khách mang quốc tịch Việt Nam</p>
@@ -11630,8 +11615,7 @@
             </div>
           </section>
 
-        </div>
-
+        
         <!-- Thông tin tổng hợp -->
         <section class="card">
           <h3 class="section-title">📝 Thông tin tổng hợp</h3>
@@ -11703,6 +11687,7 @@
             </div>
           </div>
         </section>
+        </span></li>
 
       </div>
     </div>
@@ -11911,6 +11896,360 @@
       }
     }
   </script>		
+
+ <!-- Modal UK -->
+  <div id="modal-uk" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close-modal" onclick="closeModal('uk')">×</button>
+        <div class="flex items-center gap-4">
+          <span class="text-6xl">🇬🇧</span>
+          <div>
+            <h2 class="text-3xl font-bold">Visa Anh Quốc (UK)</h2>
+            <p class="text-blue-100 mt-2">Hướng dẫn chi tiết hồ sơ visa UK Standard Visitor</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        
+        <!-- Thông tin cơ bản UK -->
+       <li><span class="font-normal">
+        <section class="card fade">
+          <h3 class="section-title">📋 Thông tin cơ bản</h3>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-bold text-lg mb-3">Nơi nộp hồ sơ</h4>
+              <div class="space-y-3 text-gray-700 text-sm">
+                <div>
+                  <p><strong>1. VFS Global UK - Hà Nội</strong></p>
+                  <p>G02, tầng G, toà nhà Ocean Park, số 1 Đào Duy Anh, Phường Phương Mai, Quận Đống Đa, Hà Nội</p>
+                </div>
+                
+                <div>
+                  <p><strong>2. VFS Global UK - TP.HCM</strong></p>
+                  <p>Tòa Nhà Ree, Lầu 3B, Phòng 3B.2, Số 9, Đoàn Văn Bơ, Phường 13, Quận 4, TP. Hồ Chí Minh</p>
+                </div>
+                
+                <div>
+                  <p><strong>3. VFS Global UK - Đà Nẵng</strong></p>
+                  <p>Tầng 6, toà nhà ACB, 218 Bạch Đằng, Phường Phước Ninh, Quận Hải Châu, Đà Nẵng</p>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h4 class="font-bold text-lg mb-3">Thời gian & Lưu ý</h4>
+              <div class="info-box">
+                <p><strong>⏱️ Thời gian xét duyệt:</strong> Trung bình 15 ngày làm việc</p>
+                <p class="text-sm mt-2 text-gray-600">Tính từ thời điểm nộp hồ sơ tại VFS. Có dịch vụ Priority (3-5 ngày) và Super Priority (24h làm việc)</p>
+              </div>
+              
+              <div class="warning-box mt-4">
+                <p class="font-semibold mb-2">⚠️ Lưu ý quan trọng:</p>
+                <ul class="list-disc ml-5 text-sm space-y-1">
+                  <li>Quyết định xét cấp visa thuộc về UK Visas and Immigration (UKVI)</li>
+                  <li>Bắt buộc phải đến trung tâm VFS để nộp hồ sơ, chụp ảnh và lăn tay (biometrics)</li>
+                  <li>Hộ chiếu phải còn hạn tối thiểu 6 tháng</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-6">
+            <h4 class="font-bold text-lg mb-3">📸 Yêu cầu hình chụp</h4>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
+                <li>Ảnh màu, nền trắng hoặc xám nhạt</li>
+                <li>Kích thước: 45mm x 35mm (tiêu chuẩn UK)</li>
+                <li>Chụp trong 6 tháng gần nhất</li>
+                <li>Khuôn mặt chiếm 70-80% diện tích ảnh</li>
+                <li>Nhìn thẳng vào camera, biểu cảm tự nhiên, không cười</li>
+                <li>Không đeo kính, mũ, trang sức che khuôn mặt</li>
+                <li>Nền không có bóng đổ</li>
+                <li>Ảnh được chụp tại VFS khi nộp hồ sơ (biometrics)</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 1. Hồ sơ cá nhân UK -->
+        <section class="card fade">
+          <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+            <h3 class="section-title">👤 1. Hồ sơ cá nhân</h3>
+            <div class="flex gap-2 items-center flex-wrap">
+              <input id="uk-personal-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+              <select id="uk-personal-filter" class="border rounded p-2 text-sm">
+                <option value="all">— Tất cả —</option>
+                <option value="doc-than">Độc thân</option>
+                <option value="ket-hon">Kết hôn</option>
+                <option value="ly-hon">Ly hôn</option>
+                <option value="goa">Góa</option>
+                <option value="tre-em">Trẻ em</option>
+              </select>
+              <button onclick="showAllItems('uk', 'personal')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
+              <button onclick="resetFilter('uk', 'personal')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="personal" data-item="doc-than">
+              <h4 class="font-bold text-indigo-700 mb-3">Độc thân</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>Hộ chiếu cũ (nếu có visa cũ)</li>
+                <li>CCCD / CMND (bản photo)</li>
+                <li>Hộ khẩu hoặc giấy xác nhận cư trú</li>
+                <li>Giấy khai sinh (nếu cần chứng minh quan hệ gia đình)</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="personal" data-item="ket-hon">
+              <h4 class="font-bold text-indigo-700 mb-3">Kết hôn</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>Hộ chiếu cũ (nếu có visa cũ)</li>
+                <li>Giấy đăng ký kết hôn</li>
+                <li>CCCD / CMND</li>
+                <li>Hộ khẩu hoặc giấy xác nhận cư trú</li>
+                <li>Giấy khai sinh (nếu đi cùng con)</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Nếu vợ/chồng đi cùng, cần chứng minh tài chính đủ cho 2 người</p>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="personal" data-item="ly-hon">
+              <h4 class="font-bold text-indigo-700 mb-3">Ly hôn</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>Hộ chiếu cũ (nếu có visa cũ)</li>                
+                <li>Quyết định ly hôn / bản án ly hôn (bản dịch công chứng)</li>
+                <li>Giấy khai sinh con (nếu có đi cùng)</li>
+                <li>CCCD / CMND</li>
+                <li>Thư giải trình về tình trạng gia đình (nếu cần)</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Nếu có con nhỏ, có thể chứng minh ràng buộc quay về Việt Nam</p>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="personal" data-item="goa">
+              <h4 class="font-bold text-indigo-700 mb-3">Góa</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Giấy chứng tử của vợ/chồng (bản dịch công chứng)</li>
+                <li>Hộ chiếu còn hạn ≥6 tháng</li>
+                <li>Hộ chiếu cũ (nếu có visa cũ)</li>
+                <li>CCCD / CMND</li>
+                <li>Giấy khai sinh con (nếu có)</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="personal" data-item="tre-em">
+              <h4 class="font-bold text-indigo-700 mb-3">Trẻ em đi cùng / đi một mình</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Giấy khai sinh</li>
+                <li>Giấy đồng ý công chứng của cả cha và mẹ (nếu đi một mình hoặc chỉ đi với 1 người)</li>
+                <li>Hộ chiếu của trẻ</li>
+                <li>Thư giải trình về mục đích chuyến đi và người giám sát tại UK</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Trẻ dưới 18 tuổi cần giấy đồng ý rõ ràng từ cha mẹ</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Hồ sơ tài chính UK -->
+        <section class="card fade">
+          <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+            <h3 class="section-title">💰 2. Hồ sơ tài chính</h3>
+            <div class="flex gap-2 items-center flex-wrap">
+              <input id="uk-financial-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+              <select id="uk-financial-filter" class="border rounded p-2 text-sm">
+                <option value="all">— Tất cả —</option>
+                <option value="dang-lam">Đang đi làm</option>
+                <option value="chu-dn">Chủ doanh nghiệp</option>
+                <option value="freelancer">Freelancer</option>
+                <option value="noi-tro">Nội trợ</option>
+              </select>
+              <button onclick="showAllItems('uk', 'financial')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
+              <button onclick="resetFilter('uk', 'financial')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="financial" data-item="dang-lam">
+              <h4 class="font-bold text-indigo-700 mb-3">Người đi làm (lương)</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Sao kê ngân hàng 3-6 tháng gần nhất (tài khoản chính)</li>
+                <li>Phiếu lương/ sao kê lương 3-6 tháng gần nhất</li>
+                <li>Giấy xác nhận thu nhập từ công ty </li>
+                <li>Sổ tiết kiệm (nếu có)</li>
+                <li>Chứng minh tài sản: sổ đỏ, sổ hồng (nếu có)</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Số dư nên có tối thiểu 100-150 triệu/người, có giao dịch đều đặn</p>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="financial" data-item="chu-dn">
+              <h4 class="font-bold text-indigo-700 mb-3">Chủ doanh nghiệp</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Sao kê ngân hàng công ty 6 tháng</li>
+                <li>Sao kê tài khoản cá nhân 6 tháng</li>
+                <li>Giấy nộp thuế/ tờ khai thuế 6 tháng gần nhất</li>
+                <li>Hóa đơn, hợp đồng kinh doanh (nếu cần)</li>
+                <li>Sổ tiết kiệm cá nhân (nếu có)</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Cần chứng minh doanh nghiệp hoạt động ổn định</p>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="financial" data-item="freelancer">
+              <h4 class="font-bold text-indigo-700 mb-3">Freelancer / Làm tự do</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Hợp đồng dịch vụ với khách hàng</li>
+                <li>Hóa đơn / invoice thanh toán</li>
+                <li>Sao kê tài khoản nhận thanh toán 6 tháng</li>
+                <li>Thư giải trình về nguồn thu nhập</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="financial" data-item="noi-tro">
+              <h4 class="font-bold text-indigo-700 mb-3">Nội trợ</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Thư bảo lãnh tài chính từ vợ/chồng hoặc người thân</li>
+                <li>Sao kê ngân hàng 6 tháng của người bảo lãnh</li>
+                <li>Giấy xác nhận thu nhập của người bảo lãnh</li>
+                <li>Giấy kết hôn (chứng minh quan hệ)</li>
+                <li>Sổ tiết kiệm chung (nếu có)</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="financial" data-item="bao-lanh">
+              <h4 class="font-bold text-indigo-700 mb-3">Người được bảo lãnh (sponsor)</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Thư bảo lãnh tài chính</li>
+                <li>Giấy tờ chứng minh quan hệ với người bảo lãnh</li>
+                <li>Sao kê ngân hàng 6 tháng của người bảo lãnh</li>
+                <li>Giấy xác nhận thu nhập của người bảo lãnh</li>
+                <li>Hộ chiếu & visa (nếu có) của người bảo lãnh</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Nên có cả tài chính cá nhân dù được bảo lãnh</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Hồ sơ công việc UK -->
+        <section class="card fade">
+          <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+            <h3 class="section-title">💼 3. Hồ sơ công việc</h3>
+            <div class="flex gap-2 items-center flex-wrap">
+              <input id="uk-employment-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+              <select id="uk-employment-filter" class="border rounded p-2 text-sm">
+                <option value="all">— Tất cả —</option>
+                <option value="nhan-vien">Nhân viên</option>
+                <option value="chu-dn">Chủ doanh nghiệp</option>
+                <option value="can-bo">Cán bộ</option>
+                <option value="sinh-vien">Sinh viên</option>
+                <option value="nghi-huu">Nghỉ hưu</option>
+              </select>
+              <button onclick="showAllItems('uk', 'employment')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
+              <button onclick="resetFilter('uk', 'employment')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="employment" data-item="nhan-vien">
+              <h4 class="font-bold text-indigo-700 mb-3">Nhân viên (HĐLĐ)</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Thư xác nhận công việc</li>
+                <li>Hợp đồng lao động</li>
+                <li>Phiếu lương/ sao kê lương 3-6 tháng gần nhất</li>
+                <li>Giấy xác nhận nghỉ phép </li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Employment letter phải nêu rõ: chức vụ, lương, ngày bắt đầu làm, thời gian nghỉ phép</p>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="employment" data-item="chu-dn">
+              <h4 class="font-bold text-indigo-700 mb-3">Chủ doanh nghiệp</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Giấy đăng ký kinh doanh</li>
+                <li>Tờ khai thuế doanh nghiệp 3-6 tháng</li>
+                <li>Hợp đồng, hóa đơn kinh doanh gần đây (nếu có)</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="employment" data-item="can-bo">
+              <h4 class="font-bold text-indigo-700 mb-3">Cán bộ, công chức</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Quyết định bổ nhiệm</li>
+                <li>Giấy xác nhận công tác từ cơ quan</li>
+                <li>Giấy xác nhận nghỉ phép có dấu đỏ</li>
+                <li>Phiếu lương/ sao kê lương 3-6 tháng gần nhất</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="employment" data-item="sinh-vien">
+              <h4 class="font-bold text-indigo-700 mb-3">Sinh viên</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Giấy xác nhận sinh viên</li>
+                <li>Giấy xin nghỉ học có dấu trường</li>
+                <li>Bảng điểm (nếu có)</li>
+                <li>Thẻ sinh viên</li>
+                <li>Thư bảo lãnh tài chính từ cha mẹ (nếu không đi cùng)</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="employment" data-item="nghi-huu">
+              <h4 class="font-bold text-indigo-700 mb-3">Người nghỉ hưu</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Sổ hưu trí</li>
+                <li>Quyết định nghỉ hưu</li>
+                <li>Sao kê nhận lương hưu</li>
+                <li>Sổ tiết kiệm / chứng minh tài sản (nếu có)</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Hồ sơ chuyến đi UK -->
+        <section class="card fade">
+          <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+            <h3 class="section-title">✈️ 4. Hồ sơ chuyến đi</h3>
+            <div class="flex gap-2 items-center flex-wrap">
+              <input id="uk-travel-search" class="border rounded p-2 text-sm" placeholder="Tìm kiếm..." style="min-width: 200px;" />
+              <select id="uk-travel-filter" class="border rounded p-2 text-sm">
+                <option value="all">— Tất cả —</option>
+                <option value="dulich">Du lịch</option>
+                <option value="congtac">Công tác</option>
+              </select>
+              <button onclick="showAllItems('uk', 'travel')" class="px-3 py-2 bg-indigo-600 text-white rounded text-sm hover:bg-indigo-700 transition-colors">Hiện tất cả</button>
+              <button onclick="resetFilter('uk', 'travel')" class="px-3 py-2 bg-gray-500 text-white rounded text-sm hover:bg-gray-600 transition-colors">Đặt lại</button>
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="travel" data-item="dulich">
+              <h4 class="font-bold text-indigo-700 mb-3">Du lịch (tourism)</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Lịch trình chi tiết</li>
+                <li>Booking vé máy bay khứ hồi</li>
+                <li>Booking khách sạn</li>
+                <li>Bảo hiểm du lịch quốc tế</li>
+                <li>Bằng chứng du lịch trước đây (nếu có)</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white border-2 border-gray-100 rounded-lg p-4 fade" data-country="uk" data-group="travel" data-item="congtac">
+              <h4 class="font-bold text-indigo-700 mb-3">Công tác / Hội nghị</h4>
+              <ul class="list-disc ml-5 text-sm space-y-2 text-gray-700">
+                <li>Thư mời từ công ty/tổ chức UK (invitation letter)</li>
+                <li>Lịch trình hội nghị / chương trình làm việc</li>
+                <li>Giấy cử đi công tác từ công ty VN</li>
+                <li>Hợp đồng hợp tác giữa 2 bên (nếu có)</li>
+                <li>Email trao đổi công việc (nếu có)</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-2">💡 Thư mời cần có đầy đủ thông tin: mục đích, thời gian, địa điểm</p>
+            </div>
+          </div>
+        </section>
+      </span></li>
+       </div>
+    </div>
+  </div>
 </main>
 
 <!-- PHẦN DƯỚI -->
